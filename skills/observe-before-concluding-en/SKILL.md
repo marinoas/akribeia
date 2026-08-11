@@ -12,6 +12,18 @@ Every rule was born from a real mistake. The incidents (I1–I3) are **one line 
 end of this file — a rule without its incident becomes superstition, and without them nobody can judge later
 whether it still holds.
 
+## Checklist
+
+- [ ] Did I ask for the whole set, or justify why the filter is safe?
+- [ ] Does every negative conclusion have a second observation **of a different shape**?
+- [ ] Did I see one real execution, not just the code that permits it?
+- [ ] Is there a map of edges, not only a list of nodes?
+- [ ] Did I verify myself whatever I am passing on from someone else?
+- [ ] Does the wording match the strength of the evidence (or say "unverified")?
+- [ ] Before the permanent record: what would overturn it, and did I check?
+
+---
+
 ## 0. The rule that is never broken
 
 **A query answers about the QUERY, not about the world.** Every observation has a scope (a filter, a path, a time
@@ -76,17 +88,6 @@ nobody looked. **Your first contribution is the missing dimension**, not the 95t
 That is a **finding**, not noise — and they almost always know something about the edges that you did not see. Stop
 and verify **BEFORE** you defend or concede. Both reactions, without checking, are the same mistake.
 
-## Checklist
-
-- [ ] Did I ask for the whole set, or justify why the filter is safe?
-- [ ] Does every negative conclusion have a second observation **of a different shape**?
-- [ ] Did I see one real execution, not just the code that permits it?
-- [ ] Is there a map of edges, not only a list of nodes?
-- [ ] Did I verify myself whatever I am passing on from someone else?
-- [ ] Does the wording match the strength of the evidence (or say "unverified")?
-- [ ] Before the permanent record: what would overturn it, and did I check?
-
----
 
 ## The incidents, in full
 

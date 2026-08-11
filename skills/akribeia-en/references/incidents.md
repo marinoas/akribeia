@@ -1,4 +1,4 @@
-# Full incidents (I1–I12)
+# Full incidents (I1–I17)
 
 The incidents behind the rules in `SKILL.md`. There they are given in one line; here in full, with the
 context that lets someone **judge whether the rule still holds**. A rule without its incident becomes
@@ -187,3 +187,82 @@ The cause was elsewhere: the findings of that period came from **real use** of t
 
 **The lesson**: never record **correlation as cause**. Before writing a rule, ask *is there another
 explanation for what I saw?* Had this rule been written, it would have degraded the work **permanently**.
+
+---
+
+## I13 — The order in which a credential is changed (§2b)
+
+A script wrote the new database password **into the application's configuration file** before confirming that
+the matching change on the authentication side had succeeded. The `ALTER USER` had failed **silently**, for
+lack of a privilege — and the script carried on.
+
+The result: the application was now presenting a password that existed nowhere. The online shop was **down for
+~90 seconds**, until the configuration file was restored from backup.
+
+**Why no existing rule caught it**: it was not a code change (§0) and not a red test (§5) — it was a change of
+**system state** with two sides that have to agree.
+
+**The lesson**: the system first, the config second. Change the secret at its source, **prove with a real call**
+that the new one works, and only then write it into the configuration files — with a backup outside the web
+root. Never both steps in one script without checking that the first one succeeded.
+
+---
+
+## I14 — The window of the full list (§5)
+
+A new e2e spec located the record it had just created inside a **general list**, using `.first()` over the
+filtered items on the page. On its own: **4/4 green, twice**. Inside the full suite of **494**: **red twice**,
+retry included.
+
+The cause was not flakiness: the page shows a **200-row window** over the whole database, and with the suite
+full the new record fell **outside the window**. The spec had never guaranteed that it was looking at its own
+record — an empty database merely made it look correct.
+
+It was fixed structurally, with a **server-side filter on the test's own unique key** — a pattern that **already
+existed**, documented in an older spec of the same family. Cost: one full gate cycle.
+
+**The lesson**: in e2e over lists, targeting is **deterministic** or it is not targeting at all. Never "whatever
+shows up first"; always the test's own unique key, filtered on the server.
+
+---
+
+## I15 — Measure the deliverable, not the code (§6)
+
+**Eleven** parallel audit dimensions, **twelve** red-team agents across three models, hours of work on an online
+shop — and **nobody** measured the page the visitor actually receives.
+
+The gap surfaced from an unrelated question the human asked about image formats: one `curl` showed **13.3 MB in
+a single visit**, because the ~1 MB originals were being served while the small variants (18–236 KB) **already
+existed on disk**. An **80%** reduction, with no new infrastructure. It affected **every** visitor, **every**
+day, **for months**.
+
+**The lesson**: a code audit answers "what does the code say", not "what does the user get". Always add the
+dimension **what the user actually receives** — weight, response time, real content — and measure it against the
+live installation.
+
+---
+
+## I16 — Comments are claims (§6b)
+
+The human had **explicitly** said the project was on a **paid** plan, and that fact had already been used in an
+answer. The configuration file stated, in a comment, that "we're on the **free** tier". Both were **in front of**
+the audit, and were never connected: the comment was accepted as fact.
+
+The same comment hid a second error — that the images were "already compressed". That was the cause of I15's
+13.3 MB: because the comment justified an **omission**, nobody measured the deliverable itself.
+
+**The lesson**: what a comment says about *intent* is useful; what it says about *environmental state* is a
+**claim with an expiry date**. Verify it before you rely on it. And the tell: when a comment justifies an
+omission, its "because" is exactly what has to be checked.
+
+---
+
+## I17 — The lost answers: the FROZEN file (§9)
+
+The human was given the go-ahead to answer the "final" sections of a verification sheet while **a worker was
+still rewriting two of them** — and then the orchestrator filled in a third. Their handwritten answers were lost
+**twice**, and were recoverable from nowhere: they lived only in their editor, between two saves.
+
+**The lesson**: from the moment the human is cleared to write into a file, that file is **FROZEN** — nobody
+touches it until they say "done". And the go-ahead is given **only** when every task on that file is complete,
+never "while we are still working on one part".

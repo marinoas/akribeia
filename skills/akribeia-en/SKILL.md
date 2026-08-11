@@ -10,9 +10,30 @@ annoyance, it is damage. The goal is **surgical, high-precision changes to code 
 It applies to any project and any language.
 
 Every rule was born from an **incident that cost something** — **a rule without its incident becomes
-superstition**. Here each incident is **one line** with its numbers; the full write-ups (I1–I12) are in
+superstition**. Here each incident is **one line** with its numbers; the full write-ups (I1–I17) are in
 [references/incidents.md](references/incidents.md). The extended reasoning on model/effort and the list of what
 was **not** adopted and why: [references/appendix.md](references/appendix.md).
+
+> **Sibling skill:** `observe-before-concluding` — it governs how you **KNOW** what is true (observation scope,
+> negative findings, the map of edges, calibrated certainty). When both apply, **that one comes first**: you do
+> not correctly fix what you incorrectly diagnosed. Do not copy its rules in here.
+
+## Checklist
+
+- [ ] No existing functionality is affected; the solution is additive.
+- [ ] Grepped for an existing helper before writing a new one.
+- [ ] Its own branch; separate commits per logical step.
+- [ ] Whatever the tests run against (build artifact) was rebuilt before running them.
+- [ ] Full gate green, with the **real** summaries read.
+- [ ] No cleanup change tangled with a functional change.
+- [ ] Every red was diagnosed (regression vs stale test vs pre-existing) before being fixed.
+- [ ] No test leaves residue for the next run.
+- [ ] The report states, in its first line, whether a human decision is needed.
+- [ ] Wherever **several defensible** options existed, a questionnaire with a recommendation was given, and the
+      human's choice was recorded.
+- [ ] State written to disk; tree clean, branch deleted.
+- [ ] **§10**: did a lesson emerge that meets the bar? If so, it was written **with its incident**, checked for
+      correlation-vs-cause, and anything redundant was pruned.
 
 ## 0. The rule that is never broken
 
@@ -20,6 +41,9 @@ was **not** adopted and why: [references/appendix.md](references/appendix.md).
 see if it passes"), look for an **additive** solution (a new layer alongside, not a conversion), and if there is
 none, report it in plain words — what is at risk, what the options are; the human decides. Always prefer **new
 files / new columns / new layers** over converting what exists.
+
+*This rule is an **AXIOM**, not an induction from an incident — it is explicitly exempt from §10's incident
+requirement: in a system holding real people's data you do not wait for it to cost something before you believe it.*
 
 ## 1. SSOT ≠ DRY — two different rules
 
@@ -50,6 +74,16 @@ file by file** — each copy, on its own, is correct code; it only shows up when
   image), **rebuild before you run** — otherwise they come back **falsely green** and an entire day's work can
   "pass" without a single line of it having executed.
 
+## 2b. Changing a credential: the SYSTEM first, the config second
+
+Change the secret **at its source** (the database user, the provider's dashboard, the secret store), **prove with
+a real call that the new one works**, and only then write it into the configuration files — with a backup
+**outside** the web root. Never both steps in one script without checking that the first succeeded. When a secret
+has two sides, accept a few seconds of mismatch but keep that window inside **one** command. This is neither a code
+change (§0) nor a red test (§5) — which is exactly why no other rule catches it.
+
+> **I13** — a script wrote the new password into the config file **before** confirming the change on the database user; the change had failed **silently** (missing privilege) and the shop was down for **~90 seconds**, restored from backup.
+
 ## 3. Orchestrator and workers
 
 - The orchestrator **does not write** the bulk of the code; it delegates with an **explicit, narrow brief** and
@@ -60,7 +94,8 @@ file by file** — each copy, on its own, is correct code; it only shows up when
   must **not** touch, the **checks** it runs itself, and the **deliverable**: what was done, what was **not** done
   and why, what is left open.
 - **Parallel for everything that reads, serial for everything that writes.** When two must write, split them **by
-  file area**.
+  file area**; where you genuinely need parallel writing, the way out is **a separate working tree per writer**
+  (e.g. `git worktree`) — not two hands in the same tree.
 - **The worker runs ITS OWN new tests — never the full suite.** Without that it delivers **unverified guesses**.
   The constraint you need is not "nobody else runs tests", it is "nobody runs **the same** tests at the same time"
   (shared port, shared test database). Require **0 failed / 0 flaky across TWO consecutive runs**.
@@ -87,6 +122,9 @@ not get their own branch**: they happen whenever the file is open anyway.
   pre-existing defect — its own bundle, not tangled into yours.
 - **"Flaky test" = suspect the APPLICATION first.** Never a retry or a sleep to "stabilise" it; measure the race
   window and write a deterministic test that fires at exactly that moment.
+- **e2e over lists: deterministic targeting, never "whatever shows up".** An assertion against a general list
+  (`.first()`, "contains X") passes on an empty database and blows up in the full suite, where the row falls
+  **outside the pagination window**. Filter server-side by the **test's own unique key**.
 - **Test hygiene**: a test that passes once and kills the suite on the next run is **worse than no test**; if a
   spec leaves residue, rewrite it so it proves the same thing **without leaving traces**. Leave a "DO NOT REPEAT"
   comment with the explanation, not just the fix.
@@ -96,6 +134,7 @@ not get their own branch**: they happen whenever the file is open anyway.
 
 > **I3** — a gate at **354/355**; the single red looked like a regression from the day's bundles, but it was flaky **on clean HEAD too**: a pre-existing UI race.
 > **I4** — the keyboard listener was attached **3–7 ms after** the modal title appeared; inside that window Escape was silently dropped (**8 out of 8**) — a defect, not flakiness.
+> **I14** — a spec green on its own **×2**, red **×2** inside the full suite of **494**: the page shows a 200-row window over the whole database and the new row fell outside it. Cost: one full gate cycle.
 
 ## 6. Audits: breadth first, then depth
 
@@ -107,19 +146,35 @@ not get their own branch**: they happen whenever the file is open anyway.
   expensive. So **wide and shallow first, deep only on what survived the triage**.
 - **Depth must REFUTE, not confirm**: deep analysis on a wrong premise produces *confident* wrong answers — what
   survives an attempt to falsify it is real.
+- **MEASURE THE DELIVERABLE, not just the code**: page weight, response time, what the live installation actually
+  serves. One `curl` sees what no amount of code reading can.
 - Dimensions that pay off: duplicated behaviour · dates and timezones · money · text transformations · permissions
-  and multi-tenancy · audit logging · messages and labels · navigation · types · test helpers. Always separate
-  **CRITICAL** (security hole, data loss) from **cleanliness**, and rank: first what produces wrong output
-  **today**, then what will silently drift **tomorrow**, last the bulk.
+  and multi-tenancy · audit logging · messages and labels · navigation · types · test helpers · **what the user
+  actually receives**. Always separate **CRITICAL** (security hole, data loss) from **cleanliness**, and rank:
+  first what produces wrong output **today**, then what will silently drift **tomorrow**, last the bulk.
 
 > **I5** — **eight** deep generic sweeps walked past the duplication of §1; the **one** new dimension found it, and only depth showed the wrong variant had been picked and that **75** rows were untouched.
+> **I15** — **11** parallel audit dimensions and **12** red-team agents never measured the page itself; one `curl` found **13.3 MB** per visit to an online shop, for months — an 80% cut with zero new infrastructure.
+
+## 6b. Code comments are CLAIMS, not evidence
+
+A comment stating an **environmental fact** ("we're on the free tier", "the images are already compressed") was
+true when it was written and nobody ever rechecked it — **verify it before you rely on it** (one `curl`, one `ls`).
+What describes *intent* is useful; what describes *state* is suspect. **The tell**: a comment that justifies an
+*omission* ("we don't optimise because X") — X is precisely the thing you must verify.
+
+> **I16** — the human had explicitly said "we are on a **paid** plan"; the config file said "we're on the **free** tier". Both were in front of the audit and were never connected. The same comment hid a second error ("already compressed"), which was the cause of I15's 13.3 MB.
 
 ## 7. What actually finds the problems
 
 In order of yield: **the human who uses the application** · a **new angle** of audit · **real execution** and
 reading the real output. "Think harder" helps where the difficulty is in the thinking — it does **not** make you
-notice something you never looked at. **And one source that is systematically forgotten: what the human has ALREADY
-written to you** — when they answer a verification sheet, read their **comments**, not only the yes/no.
+notice something you never looked at.
+
+**And one source that is systematically forgotten: what the human has ALREADY told or written to you** — one idea,
+two triggers: *when reading their answers*, read their **comments**, not only the yes/no; *when reading code*, if
+something they said **contradicts** the code, the contradiction is a **FINDING** — do not silently pick which of
+the two holds.
 
 > **I6** — the most valuable finding of an entire audit cycle came from real use: the human opened a form, pressed Escape, opened it again; **six** sweeps had not had that axis.
 > **I7** — **588** wrong date calculations in production: the domain expert had noted in a parenthesis next to a "YES" that a particular day is a public holiday, and nobody read anything but the yes/no.
@@ -171,8 +226,13 @@ file will never be seen by whoever decides what happens next. And **never an unr
 stopgap" is wrong as an absolute rule (we build in layers) — the dangerous one is the stopgap nobody remembers
 exists, so every temporary solution goes into the queue **with its exit condition**.
 
+**A file the human is answering is FROZEN.** From the moment they get the go-ahead to write inside a file,
+**NOBODY** touches it until they say "done" — and the go-ahead is given **ONLY** when every task on that file is
+finished. Answers in progress live only in their editor; they cannot be recovered from anywhere.
+
 > **I10** — scattered across dozens of files, the memory held two opposite decisions at once, **three "unresolved contradictions"** were presented that the human had already resolved, and one file's **summary** said the opposite of its body.
 > **I11** — a queue with **15** requests never entered, **6** half-entered, **8 of the 21** "pending" already done, and **16** loose ends hidden in code comments: worse than no queue at all.
+> **I17** — the go-ahead was given for the "final" sections of a sheet while a worker was still rewriting two of them; the human's handwritten answers were lost **twice**, unrecoverably.
 
 ## 10. Self-improvement of this protocol
 
@@ -180,31 +240,17 @@ This file **is updated by its own use**: at the end of every piece of work, ask 
 been written here, would have prevented it?* **The bar — both conditions together**: (1) **it actually cost
 something** (time lost, a bug shipped, the gate went red, a revert was needed) and (2) **a written rule would have
 prevented it**. Anything not meeting both **does not go in**: a protocol that bloats stops being read carefully —
-and then it loses the thing that made it useful.
+and **if it grows past what you would read before starting, it has already failed**.
 
 **Entry format**: the rule **together with its incident** (one line here, the full write-up in `references/`).
 **Prune, don't only add**: two rules saying the same thing → **unify them**; a rule that later experience disproved
 → **delete it** (a stale rule is **worse than no rule**: it costs attention and leads to a wrong decision,
 confidently). **The superstition guard**: never record **correlation as cause** — ask first, *is there another
-explanation for what I saw?* **When to ask the human**: if a new rule contradicts an existing one or changes how you
-work together, propose it — do not write it on your own; anything else (a technical lesson, a tool trap, test
-hygiene) is written autonomously, with a note.
+explanation for what I saw?* **A rule with no genuine incident is declared an AXIOM — you do not manufacture an
+incident for it**: if the rule was always followed, there is no incident, and a stretched or retrofitted "fitting"
+one contaminates precisely the file that decides whether the remaining rules still hold; an axiom is stated with its
+source (who set it, when, why) — see §0. **When to ask the human**: if a new rule contradicts an existing one or
+changes how you work together, propose it — do not write it on your own; anything else (a technical lesson, a tool
+trap, test hygiene) is written autonomously, with a note.
 
 > **I12** — it was nearly recorded that "with lower effort, more bugs get found": the correlation was real, the cause was elsewhere (real use, a new audit dimension, real execution).
-
-## Checklist
-
-- [ ] No existing functionality is affected; the solution is additive.
-- [ ] Grepped for an existing helper before writing a new one.
-- [ ] Its own branch; separate commits per logical step.
-- [ ] Whatever the tests run against (build artifact) was rebuilt before running them.
-- [ ] Full gate green, with the **real** summaries read.
-- [ ] No cleanup change tangled with a functional change.
-- [ ] Every red was diagnosed (regression vs stale test vs pre-existing) before being fixed.
-- [ ] No test leaves residue for the next run.
-- [ ] The report states, in its first line, whether a human decision is needed.
-- [ ] Wherever **several defensible** options existed, a questionnaire with a recommendation was given, and the
-      human's choice was recorded.
-- [ ] State written to disk; tree clean, branch deleted.
-- [ ] **§10**: did a lesson emerge that meets the bar? If so, it was written **with its incident**, checked for
-      correlation-vs-cause, and anything redundant was pruned.

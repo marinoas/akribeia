@@ -13,9 +13,10 @@
 ερωτήματα του τύπου «ποιος καλεί αυτό», «τι επηρεάζεται αν το αλλάξω», «δείξε μου την πηγή
 αυτής της συνάρτησης μαζί με τα μονοπάτια κλήσης της».
 
-**Δεν είναι εξάρτηση αυτού του skill.** Το skill είναι σκέτο markdown και δουλεύει
-ολόκληρο χωρίς κανένα εργαλείο. Το CodeGraph είναι **πολλαπλασιαστής** σε τρία
-συγκεκριμένα σημεία του πρωτοκόλλου — και σε κανένα άλλο.
+**Δεν είναι εξάρτηση κανενός skill της οικογένειας.** Τα skills είναι σκέτο markdown και
+δουλεύουν ολόκληρα χωρίς κανένα εργαλείο. Το CodeGraph είναι **πολλαπλασιαστής** σε τρία
+συγκεκριμένα σημεία του `akribeia` — και σε κανένα άλλο. (Οι παραπομπές «§» παρακάτω
+αφορούν το `skills/akribeia/SKILL.md`.)
 
 ### Πού βοηθά μετρημένα
 
@@ -90,9 +91,9 @@ symbols, files, and the edges between them, in a store that answers questions li
 this", "what breaks if I change it", "show me this function's source together with its call
 paths".
 
-**It is not a dependency of this skill.** The skill is plain markdown and works in full with
-no tooling at all. CodeGraph is a **multiplier** at three specific points of the protocol —
-and nowhere else.
+**It is not a dependency of any skill in the family.** The skills are plain markdown and work
+in full with no tooling at all. CodeGraph is a **multiplier** at three specific points of
+`akribeia` — and nowhere else. (The "§" references below are to `skills/akribeia/SKILL.md`.)
 
 ### Where it measurably helps
 

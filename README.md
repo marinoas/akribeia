@@ -5,9 +5,11 @@
 *Ακρίβεια* (akribeia) is the Greek word for precision, exactness — the quality you need when the changes are
 surgical and the code is not allowed to break.
 
-Ένα skill για Claude Code: ο πειθαρχημένος βρόχος παράδοσης για κώδικα **που δεν επιτρέπεται να χαλάσει**.
+Τέσσερα skills για Claude Code: πώς **ξέρεις** τι ισχύει, πώς **αλλάζεις** κώδικα που δεν επιτρέπεται να χαλάσει,
+πώς **αποδεικνύεις** ότι παρέδωσες — και οι παγίδες των ελληνικών, οριζόντια.
 
-A Claude Code skill: the disciplined delivery loop for code **that is not allowed to break**.
+Four Claude Code skills: how you **know** what is true, how you **change** code that is not allowed to break, how
+you **prove** you delivered — plus the Greek-text traps, horizontally.
 
 [Ελληνικά](#ελληνικά) · [English](#english)
 
@@ -17,23 +19,46 @@ A Claude Code skill: the disciplined delivery loop for code **that is not allowe
 
 ### Τι είναι
 
-Ένα skill που φορτώνεται από το Claude Code και αλλάζει τον τρόπο που δουλεύει σε υπάρχοντα κώδικα:
-προσθετικές λύσεις αντί για μετατροπές, ξεχωριστό branch και πλήρες gate ανά δέσμη, διάγνωση πριν από
-διόρθωση, έλεγχοι κατά διάσταση, ερωτηματολόγιο στον άνθρωπο όταν υπάρχουν πολλές υποστηρίξιμες επιλογές, και
+Μια **οικογένεια τεσσάρων skills** που φορτώνονται από το Claude Code και αλλάζουν τον τρόπο που δουλεύει σε
+υπάρχοντα κώδικα: προσθετικές λύσεις αντί για μετατροπές, ξεχωριστό branch και πλήρες gate ανά δέσμη, διάγνωση πριν
+από διόρθωση, έλεγχοι κατά διάσταση, ερωτηματολόγιο στον άνθρωπο όταν υπάρχουν πολλές υποστηρίξιμες επιλογές, και
 αναφορές που δεν λένε ψέματα.
 
-Δεν είναι θεωρία. **Κάθε κανόνας μέσα του γεννήθηκε από περιστατικό που κόστισε** — κόκκινο gate, σφάλμα που
-πέρασε στην παραγωγή, χαμένη μέρα. Τα περιστατικά είναι γραμμένα δίπλα στους κανόνες, γιατί κανόνας χωρίς
-περιστατικό γίνεται δεισιδαιμονία και κανείς δεν μπορεί να κρίνει αργότερα αν ισχύει ακόμη.
+Δεν είναι θεωρία. **Κάθε κανόνας μέσα τους γεννήθηκε από περιστατικό που κόστισε** — κόκκινο gate, σφάλμα που
+πέρασε στην παραγωγή, χαμένη μέρα, ένα κατάστημα εκτός λειτουργίας. Τα περιστατικά είναι γραμμένα δίπλα στους
+κανόνες, γιατί κανόνας χωρίς περιστατικό γίνεται δεισιδαιμονία και κανείς δεν μπορεί να κρίνει αργότερα αν ισχύει
+ακόμη.
+
+### Η οικογένεια
+
+| Skill | Η ουσία σε μία γραμμή |
+|---|---|
+| **akribeia** | Ο πειθαρχημένος βρόχος **αλλαγής** κώδικα που δεν επιτρέπεται να χαλάσει: προσθετικές λύσεις, branch + πλήρες gate ανά δέσμη, συντονιστής και εργάτες χωρίς αυτο-έλεγχο, διάγνωση πριν από διόρθωση, ειλικρινείς αναφορές. |
+| **observe-before-concluding** | Πώς τεκμηριώνεις **τι ισχύει** πριν το γράψεις: εμβέλεια παρατήρησης, αρνητικά ευρήματα με δεύτερη ματιά άλλου σχήματος, χάρτης **ακμών** (ροές) και όχι μόνο κόμβων, διαβάθμιση βεβαιότητας. |
+| **verified-delivery** | Παράδοση **με απόδειξη**: κόκκινο-πριν, ωμές γραμμές εξόδου αντί για πίνακες από μνήμης, λίστες ΠΑΓΩΜΕΝΩΝ σε κάθε ανάθεση, τι επιβιώνει της ακύρωσης, το εύρημα του χρήστη ως **κατηγορία**. |
+| **greek-text-pitfalls** | Οι παγίδες των **ελληνικών** σε κώδικα: κεφαλαία με τόνους και διαλυτικά, τελικό σίγμα (U+03C2/U+03C3), το `\w` που δεν πιάνει ελληνικά, αναζήτηση χωρίς τόνους, προσβάσιμα ονόματα, εγκλείσεις όρων, ζώνη ώρας. |
+
+### Πώς συνδέονται
+
+**`observe-before-concluding` (πώς ΞΕΡΕΙΣ) → `akribeia` (πώς ΑΛΛΑΖΕΙΣ) → `verified-delivery` (πώς ΑΠΟΔΕΙΚΝΥΕΙΣ)** —
+και το **`greek-text-pitfalls` οριζόντια**, όπου υπάρχει ελληνικό κείμενο.
+
+Η σειρά δεν είναι διακοσμητική: **δεν διορθώνεις σωστά ό,τι διέγνωσες λάθος**. Όταν ισχύουν και τα δύο πρώτα, το
+`observe-before-concluding` προηγείται. Και τα τέσσερα δουλεύουν και **μόνα τους**· δεν εξαρτώνται μεταξύ τους.
 
 ### Η δομή
 
 ```
-skills/akribeia/
-├── SKILL.md                    # οι κανόνες, πυκνά· κάθε περιστατικό σε μία γραμμή
-└── references/
-    ├── incidents.md            # τα πλήρη περιστατικά (Π1–Π12)
-    └── appendix.md             # μοντέλο & effort · τι ΔΕΝ υιοθετήθηκε και γιατί
+skills/
+├── akribeia/                       # EL — ο βρόχος αλλαγής (§0–§10)
+│   ├── SKILL.md                    #   οι κανόνες, πυκνά· κάθε περιστατικό σε μία γραμμή
+│   └── references/
+│       ├── incidents.md            #   τα πλήρη περιστατικά (Π1–Π17)
+│       └── appendix.md             #   μοντέλο & effort · τι ΔΕΝ υιοθετήθηκε και γιατί
+├── observe-before-concluding/      # EL — πώς ξέρεις τι ισχύει (περιστατικά μέσα στο SKILL.md)
+├── verified-delivery/              # EL — παράδοση με απόδειξη
+├── greek-text-pitfalls/            # EL — ελληνικά σε κώδικα
+└── *-en/                           # τα ίδια, στα αγγλικά
 ```
 
 Το `SKILL.md` είναι αυτό που διαβάζεται κάθε φορά — γι' αυτό κρατιέται σύντομο. Τα `references/` φορτώνονται
@@ -56,8 +81,8 @@ skills/akribeia/
 - **Δεν είναι εργαλείο.** Δεν εγκαθίσταται, δεν τρέχει, δεν έχει CLI.
 - **Δεν είναι εξάρτηση.** Καμία βιβλιοθήκη, κανένα πακέτο, κανένα MCP server. Σκέτο markdown.
 - **Δεν είναι framework.** Δεν σου επιβάλλει δομή repo, εργαλεία τεστ ή CI.
-- **Δεν είναι πλήρες.** Είναι ό,τι έχει αποδειχθεί μέχρι σήμερα σε ένα project. Ο ίδιος του ο §10 λέει πώς
-  κλαδεύεται όταν κάτι διαψευστεί.
+- **Δεν είναι πλήρες.** Είναι ό,τι έχει αποδειχθεί μέχρι σήμερα σε πραγματική δουλειά. Ο ίδιος ο §10 του
+  `akribeia` λέει πώς κλαδεύεται όταν κάτι διαψευστεί.
 
 ### Η ιστορία
 
@@ -67,36 +92,47 @@ skills/akribeia/
 κανόνας θα το είχε αποτρέψει. Και **κλαδεύεται** με τον ίδιο τρόπο — ό,τι διαψεύστηκε από τη μετέπειτα
 εμπειρία σβήνεται (§10), γιατί ένας ξεπερασμένος κανόνας είναι χειρότερος από ανύπαρκτο.
 
-### Τα κεφάλαια
+Τα τρία νεότερα μέλη βγήκαν από την ίδια πορεία: το `verified-delivery` όταν φάνηκε ότι μια αναφορά μπορεί να
+είναι **σωστή και ταυτόχρονα ανεπαλήθευτη**, το `greek-text-pitfalls` από ελαττώματα που περνούσαν σιωπηλά μέσα
+από πράσινα τεστ, και το `observe-before-concluding` όταν ένα φιλτραρισμένο ερώτημα έγινε **αρνητικό πόρισμα σε
+μόνιμο αρχείο** — και ήταν λάθος.
+
+### Τα κεφάλαια του `akribeia`
 
 | § | Ο κανόνας σε μία γραμμή |
 |---|---|
 | **0** | Η υπάρχουσα λειτουργικότητα δεν πειράζεται — προσθετική λύση ή σταμάτα και ρώτα. |
 | **1** | SSOT ≠ DRY: το πρώτο αφορά πού ζουν τα δεδομένα, το δεύτερο πού ζει η συμπεριφορά. |
 | **2** | Δέσμη = branch· πλήρες gate πριν από κάθε merge· διάβασε το πραγματικό summary, όχι το exit code. |
+| **2β** | Αλλαγή credential: πρώτα το σύστημα και απόδειξη με πραγματική κλήση, μετά το config. |
 | **3** | Συντονιστής που αναθέτει και δεν αυτο-ελέγχεται· παράλληλα ό,τι διαβάζει, στη σειρά ό,τι γράφει. |
 | **4** | Υλοποίηση και απλοποίηση ποτέ στο ίδιο diff. |
 | **5** | Διάγνωση πριν από διόρθωση· το τεστ πρέπει να το δεις κόκκινο πριν το πιστέψεις. |
-| **6** | Πρώτα πλάτος (νέα διάσταση), μετά βάθος — και το βάθος να ΑΝΑΙΡΕΙ, όχι να επιβεβαιώνει. |
+| **6** | Πρώτα πλάτος (νέα διάσταση), μετά βάθος — και μέτρα το **παραδοτέο**, όχι μόνο τον κώδικα. |
+| **6β** | Τα σχόλια του κώδικα είναι ισχυρισμοί, όχι τεκμήρια — ό,τι περιγράφει κατάσταση επαληθεύεται. |
 | **7** | Τα προβλήματα τα βρίσκει η πραγματική χρήση, η νέα οπτική γωνία και η πραγματική εκτέλεση. |
 | **8** | Ειλικρίνεια αναφοράς· κάθε αναφορά δηλώνει αν χρειάζεται απόφαση· και όπου οι επιλογές είναι πολλές και υποστηρίξιμες, αποφασίζει ο άνθρωπος με ερωτηματολόγιο. |
-| **9** | Αντοχή σε διακοπή: ΕΝΑ αρχείο μνήμης που επικαιροποιείται, ουρά γραμμένη από τις πηγές. |
+| **9** | Αντοχή σε διακοπή: ΕΝΑ αρχείο μνήμης που επικαιροποιείται, ουρά γραμμένη από τις πηγές, αρχείο που απαντά ο άνθρωπος = παγωμένο. |
 | **10** | Το ίδιο το πρωτόκολλο ενημερώνεται και **κλαδεύεται** από τη χρήση του, με πήχη δύο όρων. |
 
-Στο τέλος του `SKILL.md` υπάρχει λίστα ελέγχου· στο `references/appendix.md` το **τι δεν υιοθετήθηκε και
+Στην κορυφή του `SKILL.md` υπάρχει λίστα ελέγχου· στο `references/appendix.md` το **τι δεν υιοθετήθηκε και
 γιατί** (π.χ. το δημοφιλές «σβήσε τα παλιά μονοπάτια αντί για migrations» — επικίνδυνο όταν στη βάση υπάρχουν
 δεδομένα ανθρώπων).
 
 ### Εγκατάσταση
 
-Το skill είναι ένας φάκελος. Τον αντιγράφεις — τίποτε άλλο.
+Κάθε skill είναι ένας φάκελος. Τον αντιγράφεις — τίποτε άλλο.
 
-**Για όλα σου τα projects** (user scope — συνιστάται):
+**Ολόκληρη η οικογένεια, για όλα σου τα projects** (user scope — συνιστάται):
 
 ```bash
 git clone https://github.com/marinoas/akribeia.git /tmp/akribeia
 mkdir -p ~/.claude/skills
-cp -R /tmp/akribeia/skills/akribeia ~/.claude/skills/
+cp -R /tmp/akribeia/skills/akribeia \
+      /tmp/akribeia/skills/observe-before-concluding \
+      /tmp/akribeia/skills/verified-delivery \
+      /tmp/akribeia/skills/greek-text-pitfalls \
+      ~/.claude/skills/
 ```
 
 **Μόνο για ένα repo** (repo scope — μπαίνει στο git του project και το μοιράζεται η ομάδα):
@@ -106,21 +142,24 @@ mkdir -p .claude/skills
 cp -R /tmp/akribeia/skills/akribeia .claude/skills/
 ```
 
-**Αγγλική έκδοση**: αντιγράψτε `skills/akribeia-en` αντί για το ελληνικό. Εγκαταστήστε **τη μία από τις
-δύο** — αν μπουν και οι δύο, ενεργοποιούνται και οι δύο και διπλασιάζεις άσκοπα το context.
+**Αγγλική έκδοση**: αντιγράψτε τους φακέλους με την κατάληξη `-en` (`akribeia-en`,
+`observe-before-concluding-en`, `verified-delivery-en`, `greek-text-pitfalls-en`). Εγκαταστήστε **μία γλώσσα ανά
+skill** — αν μπουν και οι δύο, ενεργοποιούνται και οι δύο και διπλασιάζεις άσκοπα το context.
 
-Έλεγχος ότι φορτώθηκε: `/skills` μέσα στο Claude Code, ή απλά ζήτησέ του «διόρθωσε αυτό το bug χωρίς να
-χαλάσει τίποτα» και δες αν το επικαλείται.
+**Μπορείς να πάρεις και ένα μόνο**: τα skills δεν εξαρτώνται μεταξύ τους. Αν κρατήσεις ένα, κράτα το `akribeia`.
+
+Έλεγχος ότι φορτώθηκαν: `/skills` μέσα στο Claude Code, ή απλά ζήτησέ του «διόρθωσε αυτό το bug χωρίς να
+χαλάσει τίποτα» και δες αν τα επικαλείται.
 
 ### Πώς φαίνεται στην πράξη
 
-Το skill ενεργοποιείται μόνο του όταν η δουλειά αφορά αλλαγή σε υπάρχοντα κώδικα. Δεν χρειάζεται να το
-αναφέρεις.
+Τα skills ενεργοποιούνται μόνα τους όταν η δουλειά αφορά αλλαγή σε υπάρχοντα κώδικα ή διερεύνηση. Δεν χρειάζεται
+να τα αναφέρεις.
 
-**Χωρίς αυτό**, ένα τυπικό «διόρθωσε το bug στη λίστα» παράγει: μια αλλαγή, ένα «έτοιμο, θα έπρεπε να δουλεύει
+**Χωρίς αυτά**, ένα τυπικό «διόρθωσε το bug στη λίστα» παράγει: μια αλλαγή, ένα «έτοιμο, θα έπρεπε να δουλεύει
 τώρα», συχνά και έναν καλλωπισμό δίπλα.
 
-**Με αυτό**, η ίδια εντολή παράγει:
+**Με αυτά**, η ίδια εντολή παράγει:
 
 1. **Διάγνωση πρώτα** — τι ακριβώς φταίει, και αν το κόκκινο προϋπήρχε (`git stash` και τρέξιμο στο καθαρό
    HEAD) πριν χρεωθεί στην τρέχουσα δουλειά.
@@ -132,16 +171,29 @@ cp -R /tmp/akribeia/skills/akribeia .claude/skills/
 5. **Αναφορά που ξεκινά λέγοντας αν χρειάζεται απόφασή σου** — και αν οι εύλογες επιλογές είναι περισσότερες
    από μία, ερωτηματολόγιο με τις συνέπειες της καθεμίας και αιτιολογημένη σύσταση.
 
+Και στα ερωτήματα του τύπου «υπάρχει το Χ; πώς δουλεύει αυτό;»: **καμία αρνητική απάντηση χωρίς δεύτερη
+παρατήρηση άλλου σχήματος**, και καμία «σιγουριά» που δεν αντιστοιχεί στην απόδειξη που την στηρίζει.
+
 Το ορατό κόστος: πιο αργή απάντηση. Το αόρατο όφελος: δεν ξοδεύεις τη μεθεπόμενη μέρα ψάχνοντας τι χάλασε.
 
 ### CodeGraph
 
-Αν το repo σου έχει δείκτη [CodeGraph](https://github.com/colbymchenry/codegraph), το skill γίνεται πιο
+Αν το repo σου έχει δείκτη [CodeGraph](https://github.com/colbymchenry/codegraph), το `akribeia` γίνεται πιο
 αποδοτικό σε τρία σημεία — χαρτογράφηση blast radius πριν από παράλληλες αναθέσεις, μονοπάτια που το grep δεν
 ακολουθεί, και οικονομία context στον προσανατολισμό.
 
 Δεν είναι εξάρτηση, και οι υπερβολές δεν βοηθούν κανέναν: τι κάνει και τι **δεν** κάνει, με το ίδιο μέτρο
 ειλικρίνειας που απαιτεί η §8, στο [docs/codegraph-integration.md](docs/codegraph-integration.md).
+
+### Εκδόσεις
+
+- **v3** — από ένα skill σε **οικογένεια τεσσάρων**: νέα μέλη `observe-before-concluding`, `verified-delivery`,
+  `greek-text-pitfalls` (EL + EN). Το `akribeia` συγχρονίστηκε: νέοι κανόνες §2β (σειρά αλλαγής credential) και
+  §6β (τα σχόλια είναι ισχυρισμοί), ντετερμινιστικός εντοπισμός σε e2e λίστες (§5), «μέτρα το παραδοτέο» (§6),
+  η αντίφαση ανθρώπου-κώδικα ως εύρημα (§7), αρχείο-ΠΑΓΩΜΕΝΟ (§9), ρητή σήμανση ΑΞΙΩΜΑΤΟΣ (§0/§10), λίστα
+  ελέγχου στην κορυφή, περιστατικά Π13–Π17.
+- **v2** — δίγλωσσο (EL + EN), περιστατικά δίπλα στους κανόνες, `references/` για τα πλήρη.
+- **v1** — η πρώτη δημόσια παγίωση του πρωτοκόλλου.
 
 ### Συνεισφορά
 
@@ -157,8 +209,8 @@ MIT — δες [LICENSE](LICENSE). Αντίγραψέ το, κόψ' το, προ
 ---
 
 *Γράφτηκε σε συνεργασία ανθρώπου και Claude, πάνω σε πραγματικά περιστατικά από πραγματική δουλειά. Οι αριθμοί
-μέσα στο skill (588 λανθασμένοι υπολογισμοί, 9 στα 10 σημεία αναζήτησης, 354/355 στο gate) είναι μετρημένοι,
-όχι σχήματα λόγου.*
+μέσα στα skills (588 λανθασμένοι υπολογισμοί, 9 στα 10 σημεία αναζήτησης, 354/355 στο gate, 13,3 MB ανά επίσκεψη)
+είναι μετρημένοι, όχι σχήματα λόγου.*
 
 ---
 ---
@@ -167,22 +219,45 @@ MIT — δες [LICENSE](LICENSE). Αντίγραψέ το, κόψ' το, προ
 
 ### What it is
 
-A Claude Code skill that changes how it works on existing code: additive solutions instead of conversions, a
-branch and a full gate per bundle, diagnosis before fixing, audits by dimension, a questionnaire for the human
-whenever several options are defensible, and reports that do not lie.
+A **family of four Claude Code skills** that change how it works on existing code: additive solutions instead of
+conversions, a branch and a full gate per bundle, diagnosis before fixing, audits by dimension, a questionnaire for
+the human whenever several options are defensible, and reports that do not lie.
 
-It is not theory. **Every rule in it was born from an incident that cost something** — a red gate, a bug that
-reached production, a lost day. The incidents are written next to the rules, because a rule without its
-incident becomes superstition and nobody can later judge whether it still holds.
+It is not theory. **Every rule in them was born from an incident that cost something** — a red gate, a bug that
+reached production, a lost day, a shop taken offline. The incidents are written next to the rules, because a rule
+without its incident becomes superstition and nobody can later judge whether it still holds.
+
+### The family
+
+| Skill | The point, in one line |
+|---|---|
+| **akribeia** | The disciplined loop for **changing** code that is not allowed to break: additive solutions, branch + full gate per bundle, orchestrator and workers with no self-review, diagnosis before fixing, honest reports. |
+| **observe-before-concluding** | How you establish **what is true** before you write it down: observation scope, negative findings backed by a second look of a different shape, a map of **edges** (flows) and not just nodes, calibrated certainty. |
+| **verified-delivery** | Delivery **with proof**: red-before-green, raw output lines instead of tables written from memory, a FROZEN list in every assignment, what survives a cancellation, the user's finding as a **category**. |
+| **greek-text-pitfalls** | The traps of **Greek text** in code: uppercase with accents and diaereses, final sigma (U+03C2/U+03C3), `\w` that does not match Greek, accent-insensitive search, accessible names, term containment, time zone. |
+
+### How they connect
+
+**`observe-before-concluding` (how you KNOW) → `akribeia` (how you CHANGE) → `verified-delivery` (how you PROVE)** —
+with **`greek-text-pitfalls` horizontally**, wherever there is Greek text.
+
+The order is not decorative: **you do not correctly fix what you incorrectly diagnosed.** When the first two both
+apply, `observe-before-concluding` comes first. All four also work **on their own**; they do not depend on each
+other.
 
 ### The structure
 
 ```
-skills/akribeia-en/
-├── SKILL.md                    # the rules, dense; each incident in one line
-└── references/
-    ├── incidents.md            # the full incidents (I1–I12)
-    └── appendix.md             # model & effort · what was NOT adopted, and why
+skills/
+├── akribeia/                       # EL — the change loop (§0–§10)
+│   ├── SKILL.md                    #   the rules, dense; each incident in one line
+│   └── references/
+│       ├── incidents.md            #   the full incidents (I1–I17)
+│       └── appendix.md             #   model & effort · what was NOT adopted, and why
+├── observe-before-concluding/      # EL — how you know what is true (incidents inside SKILL.md)
+├── verified-delivery/              # EL — delivery with proof
+├── greek-text-pitfalls/            # EL — Greek text in code
+└── *-en/                           # the same, in English
 ```
 
 `SKILL.md` is what gets read every time — which is why it is kept short. The `references/` are loaded only when
@@ -203,8 +278,8 @@ It is not for greenfield prototypes that will be thrown away. There, half of the
 - **Not a tool.** Nothing to install, nothing to run, no CLI.
 - **Not a dependency.** No library, no package, no MCP server. Plain markdown.
 - **Not a framework.** It imposes no repo layout, test runner or CI.
-- **Not complete.** It is what has been proven so far on one project. Its own §10 describes how it gets pruned
-  when something is disproved.
+- **Not complete.** It is what has been proven so far in real work. `akribeia`'s own §10 describes how it gets
+  pruned when something is disproved.
 
 ### The story
 
@@ -214,35 +289,46 @@ not written as "best practices": it was **written backwards**, each time somethi
 would have prevented it. And it is **pruned** the same way — whatever later experience disproves gets deleted
 (§10), because a stale rule is worse than no rule at all.
 
-### The chapters
+The three newer members came out of the same road: `verified-delivery` when it turned out that a report can be
+**correct and unverified at the same time**, `greek-text-pitfalls` from defects that slipped silently through green
+tests, and `observe-before-concluding` when one filtered query became a **negative conclusion in a permanent
+record** — and was wrong.
+
+### The chapters of `akribeia`
 
 | § | The rule in one line |
 |---|---|
 | **0** | Working functionality is not touched — find an additive solution, or stop and ask. |
 | **1** | SSOT ≠ DRY: the first is about where data lives, the second about where behaviour lives. |
 | **2** | Bundle = branch; full gate before every merge; read the real summary, not the exit code. |
+| **2b** | Changing a credential: the system first, proven by a real call, then the config. |
 | **3** | An orchestrator that delegates and never self-reviews; parallel for reads, serial for writes. |
 | **4** | Implementation and simplification never in the same diff. |
 | **5** | Diagnose before fixing; you must see the test red before you believe it. |
-| **6** | Breadth first (a new dimension), then depth — and depth must REFUTE, not confirm. |
+| **6** | Breadth first (a new dimension), then depth — and measure the **deliverable**, not only the code. |
+| **6b** | Code comments are claims, not evidence — anything describing state must be verified. |
 | **7** | Problems are found by real use, a new angle of audit, and real execution. |
 | **8** | Honest reporting; every report states whether a decision is needed; and where several options are defensible, the human decides via a questionnaire. |
-| **9** | Surviving interruption: ONE memory file that is updated, a queue written from the sources. |
+| **9** | Surviving interruption: ONE memory file that is updated, a queue written from the sources, a file the human is answering is frozen. |
 | **10** | The protocol itself is updated and **pruned** by its own use, against a two-part bar. |
 
-`SKILL.md` closes with a checklist; `references/appendix.md` holds **what was not adopted and why** (e.g. the
+`SKILL.md` opens with a checklist; `references/appendix.md` holds **what was not adopted and why** (e.g. the
 popular "delete old paths instead of adding migrations" — dangerous once there is human data in the database).
 
 ### Installation
 
-The skill is a folder. You copy it — that is all.
+Each skill is a folder. You copy it — that is all.
 
-**For all your projects** (user scope — recommended):
+**The whole family, for all your projects** (user scope — recommended):
 
 ```bash
 git clone https://github.com/marinoas/akribeia.git /tmp/akribeia
 mkdir -p ~/.claude/skills
-cp -R /tmp/akribeia/skills/akribeia-en ~/.claude/skills/
+cp -R /tmp/akribeia/skills/akribeia-en \
+      /tmp/akribeia/skills/observe-before-concluding-en \
+      /tmp/akribeia/skills/verified-delivery-en \
+      /tmp/akribeia/skills/greek-text-pitfalls-en \
+      ~/.claude/skills/
 ```
 
 **For one repo only** (repo scope — committed to the project, shared with the team):
@@ -252,20 +338,23 @@ mkdir -p .claude/skills
 cp -R /tmp/akribeia/skills/akribeia-en .claude/skills/
 ```
 
-**Greek version**: copy `skills/akribeia` instead. Install **one of the two** — if both are present, both
-trigger and you double the context for nothing.
+**Greek version**: copy the folders without the `-en` suffix. Install **one language per skill** — if both are
+present, both trigger and you double the context for nothing.
 
-To confirm it loaded: run `/skills` inside Claude Code, or simply ask it to "fix this bug without breaking
-anything" and watch whether it invokes the skill.
+**You can also take just one**: the skills do not depend on each other. If you keep one, keep `akribeia`.
+
+To confirm they loaded: run `/skills` inside Claude Code, or simply ask it to "fix this bug without breaking
+anything" and watch whether it invokes them.
 
 ### What it looks like in practice
 
-The skill triggers on its own whenever the work involves changing existing code. You do not need to mention it.
+The skills trigger on their own whenever the work involves changing existing code, or an investigation. You do not
+need to mention them.
 
-**Without it**, a typical "fix the bug in the list view" produces: one change, a "done, this should work now",
+**Without them**, a typical "fix the bug in the list view" produces: one change, a "done, this should work now",
 and often an unrelated bit of cleanup alongside.
 
-**With it**, the same instruction produces:
+**With them**, the same instruction produces:
 
 1. **Diagnosis first** — what exactly is wrong, and whether the red pre-existed (`git stash` and run against
    clean HEAD) before it is charged to the current work.
@@ -277,17 +366,30 @@ and often an unrelated bit of cleanup alongside.
 5. **A report that opens by saying whether it needs a decision from you** — and if more than one option is
    defensible, a questionnaire with each option's consequences and a reasoned recommendation.
 
+And for questions of the "does X exist / how does this work" kind: **no negative answer without a second
+observation of a different shape**, and no confidence in the wording that the evidence does not support.
+
 The visible cost: a slower answer. The invisible benefit: you do not spend the day after tomorrow hunting for
 what broke.
 
 ### CodeGraph
 
-If your repo has a [CodeGraph](https://github.com/colbymchenry/codegraph) index, the skill gets more efficient
+If your repo has a [CodeGraph](https://github.com/colbymchenry/codegraph) index, `akribeia` gets more efficient
 in three places — mapping the blast radius before parallel assignments, following paths grep cannot, and saving
 context during orientation.
 
 It is not a dependency, and inflated claims help nobody: what it does and what it does **not**, held to the same
 honesty §8 demands, is in [docs/codegraph-integration.md](docs/codegraph-integration.md).
+
+### Versions
+
+- **v3** — from one skill to a **family of four**: new members `observe-before-concluding`, `verified-delivery`,
+  `greek-text-pitfalls` (EL + EN). `akribeia` was synced: new rules §2b (the order of a credential change) and
+  §6b (comments are claims), deterministic targeting in e2e lists (§5), "measure the deliverable" (§6), the
+  human-vs-code contradiction as a finding (§7), the FROZEN answer file (§9), explicit AXIOM marking (§0/§10),
+  the checklist moved to the top, incidents I13–I17.
+- **v2** — bilingual (EL + EN), incidents next to the rules, `references/` for the full write-ups.
+- **v1** — the first public hardening of the protocol.
 
 ### Contributing
 
@@ -302,6 +404,6 @@ MIT — see [LICENSE](LICENSE). Copy it, cut it down, adapt it to your own proje
 
 ---
 
-*Written by a human and Claude together, on top of real incidents from real work. The numbers inside the skill
-(588 wrong calculations, 9 out of 10 search entry points, 354/355 at the gate) are measured, not figures of
-speech.*
+*Written by a human and Claude together, on top of real incidents from real work. The numbers inside the skills
+(588 wrong calculations, 9 out of 10 search entry points, 354/355 at the gate, 13.3 MB per visit) are measured, not
+figures of speech.*

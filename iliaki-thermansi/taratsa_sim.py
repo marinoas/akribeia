@@ -53,15 +53,16 @@ def run(area, name, vol):
     return tot, mon, cap * (tmax - tmin)
 
 
-jan_kw = sum(L for hr, L in zip(hours, loads) if hr["m"] == 1) / (31 * 24)
-print(f"Ζήτηση Ιανουαρίου: μέση {jan_kw:.1f} kW = {jan_kw*24:.0f} kWh/ημέρα. Σήμερα θέρμανση {sum(loads):.0f} kWh, {sum(loads)*OIL:.0f} €/έτος")
-for area in (15, 25):
-    for name, vols in (("Β νερό drainback", (1, 2, 4, 6)), ("Α αέρας + πέτρες", (3, 5, 8)),
-                       ("Γ θερμέλαιο + βασάλτης", (2, 3, 4))):
-        for v in vols:
-            t, mon, emax = run(area, name, v)
-            frac = t["used"] / sum(loads)
-            save = t["used"] * OIL - t["para"] * P["elec_eur_kwh"]
-            jan = mon[1][1] / mon[1][0]
-            print(f"{area:>3} m² | {name:<24} {v:>2} m³ | γεμάτη: {emax:4.0f} kWh = {emax/jan_kw:4.0f} ώρες Ιαν | "
-                  f"κάλυψη έτους {100*frac:4.1f}% | Ιαν {100*jan:4.1f}% | εξοικ. {save:5.0f} €")
+if __name__ == "__main__":
+    jan_kw = sum(L for hr, L in zip(hours, loads) if hr["m"] == 1) / (31 * 24)
+    print(f"Ζήτηση Ιανουαρίου: μέση {jan_kw:.1f} kW = {jan_kw*24:.0f} kWh/ημέρα. Σήμερα θέρμανση {sum(loads):.0f} kWh, {sum(loads)*OIL:.0f} €/έτος")
+    for area in (15, 25):
+        for name, vols in (("Β νερό drainback", (1, 2, 4, 6)), ("Α αέρας + πέτρες", (3, 5, 8)),
+                           ("Γ θερμέλαιο + βασάλτης", (2, 3, 4))):
+            for v in vols:
+                t, mon, emax = run(area, name, v)
+                frac = t["used"] / sum(loads)
+                save = t["used"] * OIL - t["para"] * P["elec_eur_kwh"]
+                jan = mon[1][1] / mon[1][0]
+                print(f"{area:>3} m² | {name:<24} {v:>2} m³ | γεμάτη: {emax:4.0f} kWh = {emax/jan_kw:4.0f} ώρες Ιαν | "
+                      f"κάλυψη έτους {100*frac:4.1f}% | Ιαν {100*jan:4.1f}% | εξοικ. {save:5.0f} €")

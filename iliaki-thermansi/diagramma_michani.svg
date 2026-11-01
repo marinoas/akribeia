@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 1040" width="1520" height="1040" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <marker id="aH" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker>
+    <marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker>
+    <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1baf7a"/></marker>
+    <marker id="aA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9aa3ad"/></marker>
+  </defs>
+  <rect width="1520" height="1040" fill="#ffffff"/>
+  <text x="40" y="44" font-size="26" font-weight="bold" fill="#222">Μηχανή R1233zd με παθητικό ψυγείο R1233zd</text>
+  <text x="40" y="72" font-size="15" fill="#555">Πορτοκαλί: κύκλωμα μηχανής · Πράσινο: κύκλωμα ψυγείου (χωρίς αντλία, με βαρύτητα) · Μπλε: υγρό R1233 της μηχανής</text>
+
+  <!-- house outline -->
+  <polyline points="80,330 80,960 820,960 820,330" fill="none" stroke="#c9ced4" stroke-width="3"/>
+  <line x1="60" y1="330" x2="840" y2="330" stroke="#9aa3ad" stroke-width="6"/>
+  <text x="90" y="355" font-size="14" fill="#8a929b">ΤΑΡΑΤΣΑ</text>
+  <line x1="20" y1="960" x2="1500" y2="960" stroke="#9aa3ad" stroke-width="3"/>
+  <text x="30" y="985" font-size="14" fill="#8a929b">ΕΔΑΦΟΣ</text>
+
+  <!-- collector -->
+  <g transform="translate(150,150) skewX(-25)">
+    <rect x="0" y="0" width="330" height="150" fill="#fdf0ea" stroke="#eb6834" stroke-width="3"/>
+    <line x1="40" y1="10" x2="40" y2="140" stroke="#eb6834" stroke-width="2"/>
+    <line x1="95" y1="10" x2="95" y2="140" stroke="#eb6834" stroke-width="2"/>
+    <line x1="150" y1="10" x2="150" y2="140" stroke="#eb6834" stroke-width="2"/>
+    <line x1="205" y1="10" x2="205" y2="140" stroke="#eb6834" stroke-width="2"/>
+    <line x1="260" y1="10" x2="260" y2="140" stroke="#eb6834" stroke-width="2"/>
+  </g>
+  <text x="100" y="128" font-size="17" font-weight="bold" fill="#c4501f">1. ΗΛΙΑΚΟΣ ΣΥΛΛΕΚΤΗΣ = BOILER</text>
+  <text x="100" y="146" font-size="13" fill="#444">επίπεδος, με τζάμι · χαλκός, δοκιμή πίεσης ≥ 10 bar</text>
+  <text x="500" y="200" font-size="14" fill="#444">R1233 βράζει μέσα στους σωλήνες</text>
+  <text x="500" y="220" font-size="14" fill="#444">χειμώνας ~60°C · 3,9 bar</text>
+  <text x="500" y="240" font-size="14" fill="#444">καλοκαίρι ~80°C · 6,6 bar</text>
+  <text x="500" y="260" font-size="12" fill="#777">(η πίεση ρυθμίζεται από το φορτίο)</text>
+
+  <!-- vapor line collector -> engine -->
+  <polyline points="455,150 800,150 800,520 560,520" fill="none" stroke="#eb6834" stroke-width="7" marker-end="url(#aH)"/>
+  <text x="808" y="400" font-size="13" fill="#c4501f">ατμός 60–80°C</text>
+
+  <!-- engine -->
+  <rect x="330" y="470" width="225" height="130" rx="10" fill="#fdf0ea" stroke="#eb6834" stroke-width="3"/>
+  <text x="345" y="498" font-size="17" font-weight="bold" fill="#c4501f">2. ΚΙΝΗΤΗΡΑΣ</text>
+  <text x="345" y="518" font-size="14" fill="#333">+ TURBO (εκτονωτής)</text>
+  <text x="345" y="545" font-size="12" fill="#555">εκκεντροφόρος: εισαγωγή</text>
+  <text x="345" y="561" font-size="12" fill="#555">κάθε στροφή · λάδι POE</text>
+  <text x="345" y="577" font-size="12" fill="#555">ερμητικός στροφαλοθάλαμος</text>
+  <!-- shaft -->
+  <line x1="330" y1="535" x2="240" y2="535" stroke="#555" stroke-width="6"/>
+  <rect x="120" y="495" width="120" height="80" rx="8" fill="#eef1f4" stroke="#555" stroke-width="2"/>
+  <text x="135" y="528" font-size="15" font-weight="bold" fill="#333">ΓΕΝΝΗΤΡΙΑ</text>
+  <text x="135" y="550" font-size="12" fill="#555">ρεύμα ~90%</text>
+  <text x="135" y="565" font-size="12" fill="#555">του έργου</text>
+  <!-- pump on shaft -->
+  <line x1="440" y1="600" x2="440" y2="880" stroke="#555" stroke-width="6"/>
+  <rect x="330" y="880" width="170" height="70" rx="8" fill="#eaf2fc" stroke="#2a78d6" stroke-width="3"/>
+  <text x="340" y="905" font-size="14" font-weight="bold" fill="#1d5fae">3. ΑΝΤΛΙΑ ΤΡΟΦΟΔ.</text>
+  <text x="340" y="923" font-size="12" fill="#333">εμβολοφόρα, κίνηση</text>
+  <text x="340" y="938" font-size="12" fill="#333">από τον στρόφαλο</text>
+
+  <!-- exhaust to condenser -->
+  <polyline points="555,575 620,575 620,800 640,800" fill="none" stroke="#eb6834" stroke-width="6" stroke-dasharray="12,6" marker-end="url(#aH)"/>
+  <text x="630" y="660" font-size="13" fill="#c4501f">εξαγωγή</text>
+  <text x="630" y="676" font-size="13" fill="#c4501f">45–60°C</text>
+  <text x="630" y="692" font-size="13" fill="#c4501f">1,1–2,2 bar</text>
+
+  <!-- condenser HX -->
+  <rect x="640" y="760" width="170" height="110" rx="8" fill="#f4faf7" stroke="#1baf7a" stroke-width="3"/>
+  <line x1="725" y1="765" x2="725" y2="865" stroke="#1baf7a" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <text x="646" y="785" font-size="11" fill="#c4501f">μηχανή:</text>
+  <text x="646" y="800" font-size="11" fill="#c4501f">υγροποίηση</text>
+  <text x="731" y="785" font-size="11" fill="#118a5f">ψυγείο:</text>
+  <text x="731" y="800" font-size="11" fill="#118a5f">βρασμός</text>
+  <text x="648" y="890" font-size="14" font-weight="bold" fill="#118a5f">4. ΣΥΜΠΥΚΝΩΤΗΣ</text>
+  <text x="648" y="906" font-size="12" fill="#333">κάτω από τις ψύκτρες</text>
+
+  <!-- liquid out to receiver and pump, then up to collector -->
+  <rect x="500" y="820" width="90" height="60" rx="10" fill="#eaf2fc" stroke="#2a78d6" stroke-width="2"/>
+  <text x="508" y="845" font-size="12" font-weight="bold" fill="#1d5fae">ΔΟΧΕΙΟ</text>
+  <text x="508" y="861" font-size="12" fill="#1d5fae">υγρού</text>
+  <polyline points="640,850 590,850" fill="none" stroke="#2a78d6" stroke-width="5" marker-end="url(#aC)"/>
+  <polyline points="545,880 545,895 500,895" fill="none" stroke="#2a78d6" stroke-width="5" marker-end="url(#aC)"/>
+  
+  
+  <text x="600" y="935" font-size="11" fill="#1d5fae">δοχείο ΠΑΝΩ από την αντλία (όχι σπηλαίωση)</text>
+  <polyline points="330,915 290,915 290,410 160,410 160,300" fill="none" stroke="#2a78d6" stroke-width="5" marker-end="url(#aC)"/>
+  <text x="150" y="640" font-size="13" fill="#1d5fae">υγρό R1233</text>
+  <text x="150" y="656" font-size="13" fill="#1d5fae">προς συλλέκτη</text>
+  <text x="150" y="672" font-size="13" fill="#1d5fae">4–7 bar</text>
+
+  <!-- fridge loop vapor up to chimney -->
+  <polyline points="790,760 790,750 1060,750 1060,300 1100,300" fill="none" stroke="#1baf7a" stroke-width="7" marker-end="url(#aG)"/>
+  <text x="830" y="725" font-size="13" fill="#118a5f">ατμός ψυγείου</text><text x="830" y="741" font-size="13" fill="#118a5f">ανεβαίνει μόνος του</text>
+  <!-- liquid back down -->
+  <polyline points="1100,690 1010,690 1010,830 810,830" fill="none" stroke="#1baf7a" stroke-width="4" stroke-dasharray="10,6" marker-end="url(#aG)"/>
+  <text x="830" y="852" font-size="13" fill="#118a5f">υγρό κατεβαίνει με τη βαρύτητα</text>
+
+  <!-- chimney with heatsinks -->
+  <rect x="1100" y="200" width="240" height="760" fill="#f7f8fa" stroke="#9aa3ad" stroke-width="3"/>
+  <text x="960" y="192" font-size="17" font-weight="bold" fill="#118a5f">5. ΨΥΚΤΡΕΣ ΣΕ ΚΑΜΙΝΑΔΑ</text>
+  <text x="1000" y="172" font-size="13" fill="#555">βόρεια πλευρά, στη σκιά</text>
+  <g stroke="#1baf7a" stroke-width="3">
+    <line x1="1130" y1="300" x2="1310" y2="300"/><line x1="1130" y1="330" x2="1310" y2="330"/>
+    <line x1="1130" y1="360" x2="1310" y2="360"/><line x1="1130" y1="390" x2="1310" y2="390"/>
+    <line x1="1130" y1="420" x2="1310" y2="420"/><line x1="1130" y1="450" x2="1310" y2="450"/>
+    <line x1="1130" y1="480" x2="1310" y2="480"/><line x1="1130" y1="510" x2="1310" y2="510"/>
+    <line x1="1130" y1="540" x2="1310" y2="540"/><line x1="1130" y1="570" x2="1310" y2="570"/>
+    <line x1="1130" y1="600" x2="1310" y2="600"/><line x1="1130" y1="630" x2="1310" y2="630"/>
+    <line x1="1130" y1="660" x2="1310" y2="660"/><line x1="1130" y1="690" x2="1310" y2="690"/>
+  </g>
+  <line x1="1120" y1="300" x2="1120" y2="690" stroke="#1baf7a" stroke-width="5"/>
+  <text x="1135" y="290" font-size="12" fill="#118a5f">ατμός υγροποιείται στα πτερύγια</text>
+  <!-- air arrows -->
+  <polyline points="1160,940 1160,760" fill="none" stroke="#9aa3ad" stroke-width="3" marker-end="url(#aA)"/>
+  <polyline points="1220,940 1220,760" fill="none" stroke="#9aa3ad" stroke-width="3" marker-end="url(#aA)"/>
+  <polyline points="1280,940 1280,760" fill="none" stroke="#9aa3ad" stroke-width="3" marker-end="url(#aA)"/>
+  <polyline points="1220,260 1220,120" fill="none" stroke="#9aa3ad" stroke-width="3" marker-end="url(#aA)"/>
+  <text x="1236" y="140" font-size="13" fill="#6b737c">ζεστός αέρας</text>
+  <text x="1236" y="156" font-size="13" fill="#6b737c">βγαίνει πάνω</text>
+  <text x="1110" y="745" font-size="13" fill="#6b737c">κρύος αέρας μπαίνει κάτω</text>
+  <rect x="1100" y="900" width="240" height="60" fill="#eef1f4" stroke="#9aa3ad"/>
+  <text x="1112" y="925" font-size="12" fill="#555">άνοιγμα εισόδου αέρα</text>
+  <text x="1112" y="943" font-size="12" fill="#555">(προαιρετικά: βρεγμένα πτερύγια)</text>
+
+  <!-- table -->
+  <rect x="860" y="380" width="200" height="0" fill="none"/>
+  <g font-size="13">
+    <rect x="1360" y="200" width="150" height="330" rx="8" fill="#ffffff" stroke="#c9ced4"/>
+    <text x="1370" y="222" font-weight="bold" fill="#222">Ο αέρας ορίζει</text>
+    <text x="1370" y="238" font-weight="bold" fill="#222">την υγροποίηση</text>
+    <text x="1370" y="262" fill="#555">αέρας 10°C</text>
+    <text x="1370" y="278" fill="#118a5f">ψυγείο 15°C 0,9 bar</text>
+    <text x="1370" y="294" fill="#c4501f">μηχανή 20°C 1,1 bar</text>
+    <text x="1370" y="322" fill="#555">αέρας 20°C</text>
+    <text x="1370" y="338" fill="#118a5f">ψυγείο 25°C 1,3 bar</text>
+    <text x="1370" y="354" fill="#c4501f">μηχανή 30°C 1,55 bar</text>
+    <text x="1370" y="382" fill="#555">αέρας 30°C</text>
+    <text x="1370" y="398" fill="#118a5f">ψυγείο 35°C 1,8 bar</text>
+    <text x="1370" y="414" fill="#c4501f">μηχανή 40°C 2,2 bar</text>
+    <text x="1370" y="446" fill="#555" font-size="11">Με κενό αφαιρείται</text>
+    <text x="1370" y="460" fill="#555" font-size="11">μόνο ο αέρας. Η πίεση</text>
+    <text x="1370" y="474" fill="#555" font-size="11">«κάθεται» μόνη της</text>
+    <text x="1370" y="488" fill="#555" font-size="11">στη θερμοκρασία των</text>
+    <text x="1370" y="502" fill="#555" font-size="11">ψυκτρών.</text>
+  </g>
+</svg>

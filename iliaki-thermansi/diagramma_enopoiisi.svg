@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 1040" width="1520" height="1040" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <marker id="aH" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker>
+    <marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker>
+    <marker id="aW" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9b59b6"/></marker>
+  </defs>
+  <rect width="1520" height="1040" fill="#fff"/>
+  <text x="40" y="44" font-size="26" font-weight="bold" fill="#222">Ενοποιημένο σχέδιο: ήλιος → R1233 → 2 turbo σε σειρά → ψυγεία κλιματισμού</text>
+  <text x="40" y="72" font-size="15" fill="#555">Πορτοκαλί: ατμός R1233 · Μπλε: υγρό R1233 · Μωβ: νερό επίπεδου συλλέκτη · Τιμές: 50 m² συνολικά, κλίση 30°</text>
+
+  <!-- roof -->
+  <line x1="40" y1="330" x2="900" y2="330" stroke="#9aa3ad" stroke-width="6"/>
+  <text x="50" y="352" font-size="14" fill="#8a929b">ΤΑΡΑΤΣΑ</text>
+  <line x1="20" y1="975" x2="1500" y2="975" stroke="#9aa3ad" stroke-width="3"/>
+
+  <!-- flat collector -->
+  <g transform="translate(80,200) skewX(-25)">
+    <rect width="150" height="110" fill="#f5eefa" stroke="#9b59b6" stroke-width="3"/>
+  </g>
+  <text x="60" y="160" font-size="16" font-weight="bold" fill="#7d3c98">1α. ΕΠΙΠΕΔΟΣ ~5 m²</text>
+  <text x="60" y="178" font-size="12" fill="#444">νερό, χαμηλή πίεση</text>
+  <text x="60" y="193" font-size="12" fill="#444">προθερμαίνει το υγρό R1233</text>
+
+  <!-- evac tubes -->
+  <g transform="translate(380,170)">
+    <rect x="0" y="0" width="420" height="22" fill="#fdf0ea" stroke="#eb6834" stroke-width="3"/>
+    <g stroke="#eb6834" stroke-width="7" stroke-linecap="round">
+      <line x1="20" y1="25" x2="20" y2="140"/><line x1="55" y1="25" x2="55" y2="140"/><line x1="90" y1="25" x2="90" y2="140"/>
+      <line x1="125" y1="25" x2="125" y2="140"/><line x1="160" y1="25" x2="160" y2="140"/><line x1="195" y1="25" x2="195" y2="140"/>
+      <line x1="230" y1="25" x2="230" y2="140"/><line x1="265" y1="25" x2="265" y2="140"/><line x1="300" y1="25" x2="300" y2="140"/>
+      <line x1="335" y1="25" x2="335" y2="140"/><line x1="370" y1="25" x2="370" y2="140"/><line x1="405" y1="25" x2="405" y2="140"/>
+    </g>
+  </g>
+  <text x="380" y="130" font-size="16" font-weight="bold" fill="#c4501f">1β. ΣΩΛΗΝΕΣ ΚΕΝΟΥ ~45 m² = BOILER</text>
+  <text x="380" y="150" font-size="12" fill="#444">το R1233 βράζει στη συλλεκτήρια · 86°C χειμώνα → 115°C καλοκαίρι · έως ~15 bar</text>
+
+  <!-- vapor to turbines -->
+  <polyline points="800,181 960,181 960,410 1010,410" fill="none" stroke="#eb6834" stroke-width="7" marker-end="url(#aH)"/>
+
+  <!-- hermetic casing -->
+  <rect x="1010" y="360" width="460" height="300" rx="14" fill="#fbfbfb" stroke="#555" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="1022" y="382" font-size="13" font-weight="bold" fill="#333">ΕΡΜΗΤΙΚΟ ΚΕΛΥΦΟΣ (turbo + γεννήτριες μέσα στο R1233)</text>
+  <!-- HP turbo -->
+  <circle cx="1100" cy="460" r="45" fill="#fdf0ea" stroke="#eb6834" stroke-width="3"/>
+  <text x="1068" y="455" font-size="13" font-weight="bold" fill="#c4501f">TURBO 1</text>
+  <text x="1070" y="472" font-size="11" fill="#555">υψηλή π.</text>
+  <line x1="1145" y1="460" x2="1190" y2="460" stroke="#555" stroke-width="5"/>
+  <rect x="1190" y="430" width="90" height="60" rx="6" fill="#eef1f4" stroke="#555" stroke-width="2"/>
+  <text x="1198" y="456" font-size="12" font-weight="bold" fill="#333">ΓΕΝΝ. 1</text>
+  <text x="1198" y="472" font-size="11" fill="#555">υψηλών στρ.</text>
+  <!-- LP turbo -->
+  <circle cx="1100" cy="590" r="50" fill="#fdf0ea" stroke="#eb6834" stroke-width="3"/>
+  <text x="1068" y="585" font-size="13" font-weight="bold" fill="#c4501f">TURBO 2</text>
+  <text x="1068" y="602" font-size="11" fill="#555">χαμηλή π.</text>
+  <line x1="1150" y1="590" x2="1190" y2="590" stroke="#555" stroke-width="5"/>
+  <rect x="1190" y="560" width="90" height="60" rx="6" fill="#eef1f4" stroke="#555" stroke-width="2"/>
+  <text x="1198" y="586" font-size="12" font-weight="bold" fill="#333">ΓΕΝΝ. 2</text>
+  <text x="1198" y="602" font-size="11" fill="#555">υψηλών στρ.</text>
+  <polyline points="1100,505 1100,540" fill="none" stroke="#eb6834" stroke-width="6" marker-end="url(#aH)"/>
+  <text x="1300" y="455" font-size="12" fill="#333">μεταβλητή γεωμετρία:</text>
+  <text x="1300" y="471" font-size="12" fill="#333">τα πτερύγια εισόδου</text>
+  <text x="1300" y="487" font-size="12" fill="#333">ακολουθούν την πίεση</text>
+  <text x="1300" y="503" font-size="12" fill="#333">βρασμού κάθε ώρα</text>
+  <text x="1300" y="560" font-size="12" fill="#333">στρόβιλος 2 βαθμίδων</text>
+  <text x="1300" y="576" font-size="12" fill="#333">απόδοση ~65–75%</text>
+  <text x="1300" y="610" font-size="12" fill="#333">ρουλεμάν: λίγες απώλειες</text>
+  <text x="1300" y="626" font-size="12" fill="#333">(κάθε 100 W = −300 kWh/έτος)</text>
+
+  <!-- exhaust to recuperator -->
+  <polyline points="1050,590 900,590 900,640" fill="none" stroke="#eb6834" stroke-width="6" stroke-dasharray="12,6" marker-end="url(#aH)"/>
+  <rect x="820" y="640" width="160" height="70" rx="8" fill="#fff6ef" stroke="#eb6834" stroke-width="2"/>
+  <text x="830" y="666" font-size="13" font-weight="bold" fill="#c4501f">3. ΑΝΑΚΤΗΣΗ</text>
+  <text x="830" y="684" font-size="11" fill="#333">ζεστός ατμός εξαγωγής</text>
+  <text x="830" y="699" font-size="11" fill="#333">ζεσταίνει το υγρό</text>
+  <polyline points="980,675 1150,675 1150,700" fill="none" stroke="#eb6834" stroke-width="5" stroke-dasharray="12,6" marker-end="url(#aH)"/>
+
+  <!-- AC condensers in series -->
+  <g>
+    <rect x="1110" y="700" width="220" height="38" fill="#eaf6f0" stroke="#1baf7a" stroke-width="2"/>
+    <rect x="1110" y="745" width="220" height="38" fill="#eaf6f0" stroke="#1baf7a" stroke-width="2"/>
+    <rect x="1110" y="790" width="220" height="38" fill="#eaf6f0" stroke="#1baf7a" stroke-width="2"/>
+    <rect x="1110" y="835" width="220" height="38" fill="#eaf6f0" stroke="#1baf7a" stroke-width="2"/>
+    <text x="1120" y="724" font-size="12" fill="#118a5f">ψυγείο κλιμ. 1</text>
+    <text x="1120" y="769" font-size="12" fill="#118a5f">ψυγείο κλιμ. 2</text>
+    <text x="1120" y="814" font-size="12" fill="#118a5f">ψυγείο κλιμ. 3</text>
+    <text x="1120" y="859" font-size="12" fill="#118a5f">… έως ~6–10</text>
+  </g>
+  <text x="1345" y="730" font-size="15" font-weight="bold" fill="#118a5f">4. ΨΥΓΕΙΑ</text>
+  <text x="1345" y="748" font-size="15" font-weight="bold" fill="#118a5f">ΚΛΙΜΑΤΙΣΜΟΥ</text>
+  <text x="1345" y="768" font-size="12" fill="#333">σε σειρά, χωρίς</text>
+  <text x="1345" y="784" font-size="12" fill="#333">βεντιλατέρ, στη σκιά</text>
+  <text x="1345" y="804" font-size="12" fill="#333">υγροποίηση ≈ αέρας +20°C</text>
+  <text x="1345" y="820" font-size="12" fill="#333">ατμός μπαίνει πάνω,</text>
+  <text x="1345" y="836" font-size="12" fill="#333">υγρό βγαίνει κάτω</text>
+
+  <!-- liquid to receiver, pump -->
+  <polyline points="1220,873 1220,915 760,915" fill="none" stroke="#2a78d6" stroke-width="5" marker-end="url(#aC)"/>
+  <rect x="660" y="880" width="100" height="60" rx="10" fill="#eaf2fc" stroke="#2a78d6" stroke-width="2"/>
+  <text x="670" y="906" font-size="12" font-weight="bold" fill="#1d5fae">ΔΟΧΕΙΟ</text>
+  <text x="670" y="922" font-size="11" fill="#1d5fae">υγρού</text>
+  <polyline points="660,925 600,925 600,945 560,945" fill="none" stroke="#2a78d6" stroke-width="5" marker-end="url(#aC)"/>
+  <rect x="420" y="915" width="140" height="55" rx="8" fill="#eaf2fc" stroke="#2a78d6" stroke-width="3"/>
+  <text x="430" y="938" font-size="13" font-weight="bold" fill="#1d5fae">5. ΑΝΤΛΙΑ</text>
+  <text x="430" y="956" font-size="11" fill="#333">ηλεκτρική, ~5%</text>
+  <!-- liquid through recuperator then flat-HX then up to evac -->
+  <polyline points="420,940 380,940 380,690 820,690" fill="none" stroke="#2a78d6" stroke-width="5" marker-end="url(#aC)"/>
+  <polyline points="820,660 700,660 700,560 560,560" fill="none" stroke="#2a78d6" stroke-width="5" marker-end="url(#aC)"/>
+  <rect x="430" y="520" width="130" height="80" rx="8" fill="#f5eefa" stroke="#9b59b6" stroke-width="2"/>
+  <text x="440" y="545" font-size="12" font-weight="bold" fill="#7d3c98">ΠΛΑΚΟΕΙΔΗΣ</text>
+  <text x="440" y="562" font-size="11" fill="#333">νερό επίπεδου →</text>
+  <text x="440" y="577" font-size="11" fill="#333">υγρό R1233</text>
+  <text x="440" y="592" font-size="11" fill="#333">έως ~85°C</text>
+  <polyline points="430,540 300,540 300,410 590,410 590,330" fill="none" stroke="#2a78d6" stroke-width="5" marker-end="url(#aC)"/>
+  <text x="310" y="430" font-size="12" fill="#1d5fae">προθερμασμένο υγρό προς τους σωλήνες κενού</text>
+  <!-- water loop -->
+  <polyline points="180,310 180,470 495,470 495,520" fill="none" stroke="#9b59b6" stroke-width="4" marker-end="url(#aW)"/>
+  <polyline points="470,600 470,630 140,630 140,320" fill="none" stroke="#9b59b6" stroke-width="4" stroke-dasharray="8,5" marker-end="url(#aW)"/>
+  <rect x="60" y="680" width="200" height="80" rx="8" fill="#f5eefa" stroke="#9b59b6" stroke-width="2"/>
+  <text x="70" y="705" font-size="12" font-weight="bold" fill="#7d3c98">ΖΕΣΤΟ ΝΕΡΟ ΧΡΗΣΗΣ</text>
+  <text x="70" y="723" font-size="11" fill="#333">ό,τι περισσεύει από</text>
+  <text x="70" y="738" font-size="11" fill="#333">τον επίπεδο συλλέκτη</text>
+  <polyline points="140,630 140,680" fill="none" stroke="#9b59b6" stroke-width="3" stroke-dasharray="4,4" marker-end="url(#aW)"/>
+
+  <!-- results box -->
+  <rect x="40" y="800" width="330" height="150" rx="10" fill="#fff" stroke="#c9ced4"/>
+  <text x="52" y="824" font-size="14" font-weight="bold" fill="#222">Ρεύμα (προσομοίωση, kWh/έτος)</text>
+  <text x="52" y="848" font-size="12" fill="#333">στρόβιλος 60%: 1 115</text>
+  <text x="52" y="866" font-size="12" fill="#333">στρόβιλος 70%: 1 404–1 515</text>
+  <text x="52" y="884" font-size="12" fill="#333">στρόβιλος 75%: 1 550</text>
+  <text x="52" y="902" font-size="12" fill="#333">ρουλεμάν 50 W αντί 150 W: 1 710</text>
+  <text x="52" y="928" font-size="11" fill="#777">χωρίς πρωινό ζέσταμα/συννεφιές (−10–20%)</text>
+</svg>

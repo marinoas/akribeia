@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 1040" width="1520" height="1040" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <marker id="aS" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e0a800"/></marker>
+    <marker id="aR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+    <marker id="aB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker>
+    <marker id="aE" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7d3c98"/></marker>
+    <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#666"/></marker>
+    <linearGradient id="mir" x1="0" x2="1"><stop offset="0" stop-color="#cfd8e3"/><stop offset="0.5" stop-color="#f4f8fc"/><stop offset="1" stop-color="#b9c6d6"/></linearGradient>
+  </defs>
+  <rect width="1520" height="1040" fill="#fff"/>
+  <text x="40" y="44" font-size="26" font-weight="bold" fill="#222">Παραβολικό κάτοπτρο + Stirling: πώς μοιάζει</text>
+  <text x="40" y="72" font-size="15" fill="#555">Πλάγια όψη στην αυλή · δεξιά: μεγέθυνση της «μονάδας ισχύος» στην εστία</text>
+
+  <!-- sun -->
+  <circle cx="110" cy="140" r="38" fill="#ffd54a" stroke="#e0a800" stroke-width="3"/>
+  <text x="70" y="205" font-size="14" fill="#a07700">ήλιος</text>
+
+  <!-- ground -->
+  <line x1="20" y1="900" x2="1500" y2="900" stroke="#8a7a5a" stroke-width="4"/>
+  <text x="30" y="925" font-size="14" fill="#8a7a5a">ΑΥΛΗ (έδαφος)</text>
+
+  <!-- pedestal + tracking -->
+  <rect x="540" y="620" width="40" height="280" fill="#9aa3ad" stroke="#555" stroke-width="2"/>
+  <rect x="500" y="890" width="120" height="14" fill="#777"/>
+  <circle cx="560" cy="610" r="18" fill="#eef1f4" stroke="#555" stroke-width="3"/>
+  <path d="M600,700 A60,25 0 1,1 520,700" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#aG)"/>
+  <text x="600" y="760" font-size="12" fill="#444">άξονας 1: γυρίζει</text>
+  <text x="600" y="776" font-size="12" fill="#444">ανατολή → δύση</text>
+  <path d="M600,595 A40,40 0 0,0 580,560" fill="none" stroke="#666" stroke-width="2.5" marker-end="url(#aG)"/>
+  <text x="608" y="585" font-size="12" fill="#444">άξονας 2: γέρνει</text>
+  <text x="608" y="601" font-size="12" fill="#444">(ύψος ήλιου)</text>
+
+  <!-- dish group rotated toward sun -->
+  <g transform="translate(560,600) rotate(-35)">
+    <!-- rays -->
+    <g stroke="#e0a800" stroke-width="2" fill="none">
+      <polyline points="-150,-520 -150,-25.9 0,-217" marker-end="url(#aS)"/>
+      <polyline points="-75,-520 -75,-6.5 0,-217" marker-end="url(#aS)"/>
+      <polyline points="75,-520 75,-6.5 0,-217" marker-end="url(#aS)"/>
+      <polyline points="150,-520 150,-25.9 0,-217" marker-end="url(#aS)"/>
+    </g>
+    <!-- dish -->
+    <path d="M-180,-37.3 Q0,37.3 180,-37.3 L180,-27 Q0,47 -180,-27 Z" fill="url(#mir)" stroke="#5b6b7d" stroke-width="3"/>
+    <!-- struts -->
+    <line x1="-170" y1="-34" x2="-18" y2="-205" stroke="#666" stroke-width="4"/>
+    <line x1="170" y1="-34" x2="18" y2="-205" stroke="#666" stroke-width="4"/>
+    <!-- power unit -->
+    <rect x="-28" y="-300" width="56" height="95" rx="6" fill="#fdf0ea" stroke="#c0392b" stroke-width="3"/>
+    <rect x="-10" y="-210" width="20" height="8" fill="#222"/>
+    <!-- dimensions -->
+    <line x1="-180" y1="20" x2="180" y2="20" stroke="#333" stroke-width="1.5" marker-start="url(#aG)" marker-end="url(#aG)"/>
+    <text x="-60" y="42" font-size="14" font-weight="bold" fill="#333">D = 4 m</text>
+    <line x1="215" y1="0" x2="215" y2="-217" stroke="#333" stroke-width="1.5" stroke-dasharray="5,4" marker-start="url(#aG)" marker-end="url(#aG)"/>
+    <text x="225" y="-105" font-size="14" font-weight="bold" fill="#333">f = 2,41 m</text>
+  </g>
+
+  <!-- labels for dish -->
+  <text x="300" y="770" font-size="15" font-weight="bold" fill="#3c4d60">ΚΑΤΟΠΤΡΟ</text>
+  <text x="300" y="790" font-size="12" fill="#444">12,6 m² καθρέφτες από γυαλί</text>
+  <text x="300" y="806" font-size="12" fill="#444">βάθος 41 cm · ~9,6 kW στο μεσημέρι</text>
+  <text x="300" y="822" font-size="12" fill="#444">συγκέντρωση ~2.600×</text>
+
+  <!-- zoom line from focus to inset -->
+  <line x1="450" y1="400" x2="960" y2="150" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <line x1="450" y1="400" x2="960" y2="640" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="360" y="340" font-size="13" font-weight="bold" fill="#c0392b">ΜΟΝΑΔΑ ΙΣΧΥΟΣ</text><text x="360" y="356" font-size="12" fill="#c0392b">(στην εστία)</text>
+
+  <!-- INSET -->
+  <rect x="960" y="100" width="530" height="560" rx="12" fill="#fbfbfb" stroke="#c0392b" stroke-width="2"/>
+  <text x="975" y="125" font-size="15" font-weight="bold" fill="#c0392b">Μεγέθυνση: η μονάδα ισχύος (~0,6 m μήκος)</text>
+  <!-- generator -->
+  <rect x="1060" y="145" width="130" height="50" rx="6" fill="#eef1f4" stroke="#555" stroke-width="2"/>
+  <text x="1075" y="175" font-size="13" font-weight="bold" fill="#333">ΓΕΝΝΗΤΡΙΑ</text>
+  <text x="1205" y="168" font-size="12" fill="#333">~1,1 kW ρεύμα</text>
+  <!-- crankcase / cylinders -->
+  <rect x="1070" y="200" width="110" height="60" rx="6" fill="#e8e8e8" stroke="#555" stroke-width="2"/>
+  <text x="1080" y="235" font-size="12" fill="#333">στρόφαλος</text>
+  <rect x="1050" y="265" width="60" height="70" fill="#dce9f7" stroke="#2a78d6" stroke-width="2"/>
+  <text x="1053" y="305" font-size="11" fill="#1d5fae">κρύος</text>
+  <rect x="1140" y="265" width="60" height="70" fill="#fde2d6" stroke="#c0392b" stroke-width="2"/>
+  <text x="1145" y="305" font-size="11" fill="#a93226">ζεστός</text>
+  <text x="1205" y="280" font-size="12" fill="#333">STIRLING τύπου άλφα</text>
+  <text x="1205" y="296" font-size="12" fill="#333">ήλιο ~30 bar · ~0,55 L</text>
+  <text x="1205" y="312" font-size="12" fill="#333">3000 στροφές · απόδοση ~30%</text>
+  <!-- cooler -->
+  <rect x="1040" y="340" width="80" height="26" fill="#2a78d6" opacity="0.25" stroke="#2a78d6" stroke-width="2"/>
+  <text x="975" y="358" font-size="11" fill="#1d5fae">ψύκτης</text>
+  <polyline points="1040,350 1000,350 1000,640" fill="none" stroke="#2a78d6" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="1006" y="600" font-size="11" fill="#1d5fae">νερό 55°C</text>
+  <text x="1006" y="614" font-size="11" fill="#1d5fae">προς δεξαμενή</text>
+  <!-- regenerator -->
+  <rect x="1115" y="340" width="35" height="26" fill="url(#mir)" stroke="#666" stroke-width="1.5"/>
+  <text x="1205" y="352" font-size="12" fill="#333">αναγεννητής (πλέγμα σύρματος)</text>
+  <!-- heater head -->
+  <rect x="1140" y="340" width="70" height="26" fill="#f5b7a1" stroke="#c0392b" stroke-width="2"/>
+  <text x="1205" y="372" font-size="12" fill="#a93226">κεφαλή ~560°C (310S / Inconel)</text>
+  <!-- Al-Si store with sodium -->
+  <rect x="1030" y="385" width="220" height="130" rx="8" fill="#e9e3d6" stroke="#8a7a5a" stroke-width="3"/>
+  <rect x="1060" y="405" width="160" height="90" rx="6" fill="#f3c3a9" stroke="#c0392b" stroke-width="2"/>
+  <text x="1070" y="430" font-size="12" font-weight="bold" fill="#7a2d16">Al-Si 577°C</text>
+  <text x="1070" y="447" font-size="11" fill="#333">~150 kg, 20 kWh</text>
+  <text x="1070" y="463" font-size="11" fill="#333">λιώνει τη μέρα,</text>
+  <text x="1070" y="479" font-size="11" fill="#333">στερεοποιείται τη νύχτα</text>
+  <text x="1260" y="420" font-size="12" fill="#333">μόνωση 20 cm</text>
+  <text x="1260" y="440" font-size="12" fill="#333">ατμός νατρίου μέσα:</text>
+  <text x="1260" y="456" font-size="12" fill="#333">μεταφέρει τη ζέστη από</text>
+  <text x="1260" y="472" font-size="12" fill="#333">την κοιλότητα στο Al-Si</text>
+  <text x="1260" y="488" font-size="12" fill="#333">και στην κεφαλή</text>
+  <!-- cavity receiver -->
+  <path d="M1080,520 L1200,520 L1180,585 L1100,585 Z" fill="#2b2b2b" stroke="#c0392b" stroke-width="2"/>
+  <text x="1260" y="545" font-size="12" font-weight="bold" fill="#a93226">ΚΟΙΛΟΤΗΤΑ ~650°C</text>
+  <text x="1260" y="561" font-size="12" fill="#333">άνοιγμα ~8 cm</text>
+  <rect x="1125" y="585" width="30" height="8" fill="#ffd54a"/>
+  <!-- concentrated light -->
+  <polyline points="1080,645 1130,595" fill="none" stroke="#e0a800" stroke-width="3" marker-end="url(#aS)"/>
+  <polyline points="1200,645 1150,595" fill="none" stroke="#e0a800" stroke-width="3" marker-end="url(#aS)"/>
+  <polyline points="1140,650 1140,598" fill="none" stroke="#e0a800" stroke-width="3" marker-end="url(#aS)"/>
+  <text x="1210" y="635" font-size="12" fill="#a07700">συγκεντρωμένο φως</text>
+
+  <!-- water + cable down to ground -->
+  <polyline points="560,640 560,860 700,860 760,860" fill="none" stroke="#2a78d6" stroke-width="4" marker-end="url(#aB)"/>
+  <text x="590" y="835" font-size="12" fill="#1d5fae">εύκαμπτοι σωλήνες</text><text x="590" y="850" font-size="12" fill="#1d5fae">νερού</text>
+  <polyline points="575,640 575,880 1080,880" fill="none" stroke="#7d3c98" stroke-width="3" marker-end="url(#aE)"/>
+  <text x="950" y="873" font-size="12" fill="#7d3c98">καλώδιο ρεύματος</text>
+
+  <!-- sodium acetate tank -->
+  <rect x="760" y="780" width="170" height="110" rx="10" fill="#eaf2fc" stroke="#2a78d6" stroke-width="3"/>
+  <text x="772" y="805" font-size="13" font-weight="bold" fill="#1d5fae">ΟΞΙΚΟ ΝΑΤΡΙΟ</text>
+  <text x="772" y="823" font-size="12" fill="#333">λιώνει 58°C</text>
+  <text x="772" y="840" font-size="12" fill="#333">~0,4 m³ · 42 kWh</text>
+  <text x="772" y="857" font-size="12" fill="#333">ζέστη για μέρες</text>
+  <polyline points="930,820 1100,820" fill="none" stroke="#c0392b" stroke-width="4" marker-end="url(#aR)"/>
+
+  <!-- house -->
+  <polygon points="1100,780 1290,690 1480,780" fill="#f7f1e8" stroke="#8a7a5a" stroke-width="3"/>
+  <rect x="1100" y="780" width="380" height="120" fill="#f7f1e8" stroke="#8a7a5a" stroke-width="3"/>
+  <text x="1250" y="760" font-size="14" font-weight="bold" fill="#6b5a3a">ΣΠΙΤΙ</text>
+  <g stroke="#c0392b" stroke-width="3"><line x1="1120" y1="800" x2="1120" y2="850"/><line x1="1135" y1="800" x2="1135" y2="850"/><line x1="1150" y1="800" x2="1150" y2="850"/><line x1="1165" y1="800" x2="1165" y2="850"/></g>
+  <text x="1115" y="870" font-size="12" fill="#a93226">καλοριφέρ</text>
+  <text x="1115" y="886" font-size="12" fill="#a93226">ζεστό νερό</text>
+  <rect x="1300" y="810" width="150" height="60" rx="6" fill="#f5eefa" stroke="#7d3c98" stroke-width="2"/>
+  <text x="1310" y="835" font-size="12" font-weight="bold" fill="#7d3c98">ΜΕΤΑΤΡΟΠΕΑΣ</text>
+  <text x="1310" y="852" font-size="11" fill="#333">→ πρίζες / δίκτυο</text>
+
+  <!-- results -->
+  <rect x="40" y="440" width="330" height="200" rx="10" fill="#fff" stroke="#c9ced4"/>
+  <text x="52" y="465" font-size="15" font-weight="bold" fill="#222">Τι δίνει τον χρόνο</text>
+  <text x="52" y="490" font-size="13" fill="#333">ρεύμα ~4.200 kWh (αποθήκη 20 kWh)</text>
+  <text x="52" y="510" font-size="13" fill="#333">       ~4.700 kWh (αποθήκη 40 kWh)</text>
+  <text x="52" y="535" font-size="13" fill="#333">ήλιος → ρεύμα ~19–21%</text>
+  <text x="52" y="560" font-size="13" fill="#333">ζέστη 55°C ~10–12 MWh</text>
+  <text x="52" y="585" font-size="13" fill="#333">Ιαν ~200 · Ιουλ ~640 kWh ρεύμα</text>
+  <text x="52" y="615" font-size="11" fill="#777">άνεμος &gt; 50 km/h → θέση ασφαλείας</text>
+  <text x="52" y="631" font-size="11" fill="#777">χάθηκε στόχευση → στρίβει μακριά από τον ήλιο</text>
+</svg>

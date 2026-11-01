@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 1040" width="1520" height="1040" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <marker id="aH" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker>
+    <marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker>
+    <marker id="aO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a5a00"/></marker>
+    <marker id="aR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+  </defs>
+  <rect width="1520" height="1040" fill="#fff"/>
+  <text x="40" y="44" font-size="26" font-weight="bold" fill="#222">Ήλιος τη μέρα + τζάκι τη νύχτα → scroll R1233 → ρεύμα + θέρμανση</text>
+  <text x="40" y="72" font-size="15" fill="#555">Πορτοκαλί: ατμός R1233 · Μπλε: υγρό R1233 · Καφέ: θερμικό λάδι τζακιού · Κόκκινο: νερό καλοριφέρ</text>
+
+  <line x1="40" y1="300" x2="760" y2="300" stroke="#9aa3ad" stroke-width="6"/>
+  <text x="50" y="322" font-size="14" fill="#8a929b">ΤΑΡΑΤΣΑ</text>
+  <line x1="20" y1="985" x2="1500" y2="985" stroke="#9aa3ad" stroke-width="3"/>
+
+  <!-- solar -->
+  <g transform="translate(90,150)">
+    <rect width="380" height="20" fill="#fdf0ea" stroke="#eb6834" stroke-width="3"/>
+    <g stroke="#eb6834" stroke-width="7" stroke-linecap="round">
+      <line x1="20" y1="24" x2="20" y2="130"/><line x1="60" y1="24" x2="60" y2="130"/><line x1="100" y1="24" x2="100" y2="130"/>
+      <line x1="140" y1="24" x2="140" y2="130"/><line x1="180" y1="24" x2="180" y2="130"/><line x1="220" y1="24" x2="220" y2="130"/>
+      <line x1="260" y1="24" x2="260" y2="130"/><line x1="300" y1="24" x2="300" y2="130"/><line x1="340" y1="24" x2="340" y2="130"/>
+    </g>
+  </g>
+  <text x="90" y="118" font-size="16" font-weight="bold" fill="#c4501f">1. ΣΩΛΗΝΕΣ ΚΕΝΟΥ (+5 m² επίπεδος) — ΜΕΡΑ</text>
+  <text x="90" y="138" font-size="12" fill="#444">R1233 βράζει 86–115°C · έως ~15 bar</text>
+
+  <!-- fireplace -->
+  <rect x="80" y="560" width="230" height="200" rx="8" fill="#fbf3e6" stroke="#8a5a00" stroke-width="3"/>
+  <path d="M150,740 C140,700 175,690 165,650 C195,680 210,700 200,740 Z" fill="#f39c12" stroke="#d35400" stroke-width="2"/>
+  <path d="M195,740 C190,715 215,705 210,680 C230,705 235,720 230,740 Z" fill="#f1c40f" stroke="#d35400" stroke-width="2"/>
+  <rect x="95" y="580" width="200" height="40" rx="4" fill="#efe0c4" stroke="#8a5a00" stroke-width="2"/>
+  <text x="102" y="605" font-size="12" fill="#5a3b00">χιτώνιο λαδιού</text>
+  <text x="80" y="545" font-size="16" font-weight="bold" fill="#8a5a00">2. ΤΖΑΚΙ-ΚΑΣΕΤΑ — ΝΥΧΤΑ</text>
+  <text x="80" y="785" font-size="12" fill="#444">~10 kW στο λάδι · ~3,3 kg ξύλα/ώρα</text>
+  <text x="80" y="802" font-size="12" fill="#444">λάδι ≤ 180°C (το R1233 ΠΟΤΕ στη φλόγα)</text>
+  <text x="80" y="819" font-size="12" fill="#444">δοχείο διαστολής · βαλβίδα ασφαλείας</text>
+  <text x="80" y="836" font-size="12" fill="#444">ψύκτρα ασφαλείας χωρίς ρεύμα (θερμοσίφωνας)</text>
+
+  <!-- oil loop to HX -->
+  <rect x="420" y="560" width="150" height="90" rx="8" fill="#fbf3e6" stroke="#8a5a00" stroke-width="2"/>
+  <text x="430" y="585" font-size="13" font-weight="bold" fill="#8a5a00">ΑΤΜΟΠΟΙΗΤΗΣ</text>
+  <text x="430" y="603" font-size="12" fill="#333">λάδι → R1233</text>
+  <text x="430" y="620" font-size="12" fill="#333">βρασμός 120–140°C</text>
+  <text x="430" y="637" font-size="12" fill="#333">16–23 bar</text>
+  <polyline points="295,600 420,600" fill="none" stroke="#8a5a00" stroke-width="5" marker-end="url(#aO)"/>
+  <polyline points="420,635 340,635 340,700 310,700" fill="none" stroke="#8a5a00" stroke-width="5" stroke-dasharray="10,6" marker-end="url(#aO)"/>
+  <text x="330" y="590" font-size="11" fill="#8a5a00">λάδι 180°C</text>
+
+  <!-- vapor collector -->
+  <polyline points="470,160 700,160 700,380 800,380" fill="none" stroke="#eb6834" stroke-width="7" marker-end="url(#aH)"/>
+  <polyline points="570,580 700,580 700,385" fill="none" stroke="#eb6834" stroke-width="6" marker-end="url(#aH)"/>
+  <text x="710" y="430" font-size="12" fill="#c4501f">ατμός από ήλιο Ή τζάκι</text>
+  <text x="710" y="446" font-size="12" fill="#c4501f">(βαλβίδες αντεπιστροφής)</text>
+
+  <!-- scrolls -->
+  <circle cx="860" cy="380" r="55" fill="#fdf0ea" stroke="#eb6834" stroke-width="3"/>
+  <text x="826" y="375" font-size="14" font-weight="bold" fill="#c4501f">SCROLL 1</text>
+  <text x="826" y="393" font-size="11" fill="#555">inverter, γενν.</text>
+  <circle cx="1030" cy="380" r="55" fill="#fdf0ea" stroke="#eb6834" stroke-width="3"/>
+  <text x="996" y="375" font-size="14" font-weight="bold" fill="#c4501f">SCROLL 2</text>
+  <text x="996" y="393" font-size="11" fill="#555">inverter, γενν.</text>
+  <polyline points="915,380 975,380" fill="none" stroke="#eb6834" stroke-width="5" marker-end="url(#aH)"/>
+  <polyline points="860,325 860,285 1180,285 1180,380" fill="none" stroke="#eb6834" stroke-width="4" stroke-dasharray="8,5" marker-end="url(#aH)"/>
+  <text x="880" y="275" font-size="12" fill="#c4501f">παράκαμψη: μόνο scroll 1 (ήλιος, καλοριφέρ)</text>
+  <text x="800" y="500" font-size="12" fill="#333">σε σειρά: τζάκι + ψυγεία έξω</text>
+  <text x="800" y="516" font-size="12" fill="#333">(λόγος πιέσεων έως ~18)</text>
+  <polyline points="1085,390 1180,390 1180,520" fill="none" stroke="#eb6834" stroke-width="6" stroke-dasharray="12,6" marker-end="url(#aH)"/>
+
+  <!-- 3-way valve -->
+  <circle cx="1180" cy="540" r="18" fill="#fff" stroke="#333" stroke-width="3"/>
+  <text x="1205" y="512" font-size="13" font-weight="bold" fill="#333">3. ΤΡΙΟΔΗ: ΠΟΥ ΠΑΕΙ Η ΖΕΣΤΗ</text>
+
+  <!-- radiators path -->
+  <polyline points="1165,550 1000,550 1000,640" fill="none" stroke="#eb6834" stroke-width="5" stroke-dasharray="12,6" marker-end="url(#aH)"/>
+  <rect x="920" y="640" width="170" height="80" rx="8" fill="#fdeeee" stroke="#c0392b" stroke-width="2"/>
+  <text x="930" y="664" font-size="13" font-weight="bold" fill="#a93226">ΕΝΑΛΛΑΚΤΗΣ</text>
+  <text x="930" y="682" font-size="12" fill="#333">R1233 → καλοριφέρ</text>
+  <text x="930" y="699" font-size="12" fill="#333">υγροποίηση ~50°C</text>
+  <polyline points="1090,660 1150,660 1150,780 1210,780" fill="none" stroke="#c0392b" stroke-width="4" marker-end="url(#aR)"/>
+  <rect x="1210" y="740" width="150" height="80" rx="6" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+  <g stroke="#c0392b" stroke-width="3"><line x1="1225" y1="750" x2="1225" y2="810"/><line x1="1245" y1="750" x2="1245" y2="810"/><line x1="1265" y1="750" x2="1265" y2="810"/><line x1="1285" y1="750" x2="1285" y2="810"/><line x1="1305" y1="750" x2="1305" y2="810"/><line x1="1325" y1="750" x2="1325" y2="810"/><line x1="1345" y1="750" x2="1345" y2="810"/></g>
+  <text x="1210" y="840" font-size="13" font-weight="bold" fill="#a93226">ΚΑΛΟΡΙΦΕΡ (χειμώνας)</text>
+  <polyline points="1210,800 1120,800 1120,705 1090,705" fill="none" stroke="#c0392b" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#aR)"/>
+
+  <!-- AC condensers path -->
+  <polyline points="1198,540 1300,540 1300,580" fill="none" stroke="#eb6834" stroke-width="5" stroke-dasharray="12,6" marker-end="url(#aH)"/>
+  <g>
+    <rect x="1270" y="580" width="200" height="28" fill="#eaf6f0" stroke="#1baf7a" stroke-width="2"/>
+    <rect x="1270" y="614" width="200" height="28" fill="#eaf6f0" stroke="#1baf7a" stroke-width="2"/>
+    <rect x="1270" y="648" width="200" height="28" fill="#eaf6f0" stroke="#1baf7a" stroke-width="2"/>
+  </g>
+  <text x="1280" y="599" font-size="12" fill="#118a5f">ψυγεία κλιματισμού έξω</text>
+  <text x="1280" y="633" font-size="12" fill="#118a5f">(όταν δεν θέλεις θέρμανση)</text>
+  <text x="1280" y="667" font-size="12" fill="#118a5f">υγροποίηση ≈ αέρας +20°C</text>
+
+  <!-- liquid return -->
+  <polyline points="1370,676 1370,710 1480,710 1480,930 820,930" fill="none" stroke="#2a78d6" stroke-width="4" marker-end="url(#aC)"/>
+  <polyline points="1000,720 1000,930" fill="none" stroke="#2a78d6" stroke-width="4"/>
+  <rect x="700" y="900" width="120" height="60" rx="10" fill="#eaf2fc" stroke="#2a78d6" stroke-width="2"/>
+  <text x="710" y="926" font-size="12" font-weight="bold" fill="#1d5fae">ΔΟΧΕΙΟ</text>
+  <text x="710" y="942" font-size="11" fill="#1d5fae">πάνω από αντλία</text>
+  <rect x="520" y="905" width="140" height="55" rx="8" fill="#eaf2fc" stroke="#2a78d6" stroke-width="3"/>
+  <text x="530" y="928" font-size="13" font-weight="bold" fill="#1d5fae">4. ΑΝΤΛΙΑ</text>
+  <text x="530" y="946" font-size="11" fill="#333">έως ~25 bar</text>
+  <polyline points="700,935 660,935" fill="none" stroke="#2a78d6" stroke-width="4" marker-end="url(#aC)"/>
+  <polyline points="520,930 400,930 400,680 495,680 495,650" fill="none" stroke="#2a78d6" stroke-width="4" marker-end="url(#aC)"/>
+  <polyline points="400,680 400,500 560,500 560,300" fill="none" stroke="#2a78d6" stroke-width="4" marker-end="url(#aC)"/>
+  <text x="410" y="490" font-size="12" fill="#1d5fae">υγρό προς ήλιο ή τζάκι</text>
+
+  <!-- results box -->
+  <rect x="40" y="860" width="320" height="110" rx="10" fill="#fff" stroke="#c9ced4"/>
+  <text x="52" y="884" font-size="14" font-weight="bold" fill="#222">Τζάκι, 10 kW στο λάδι</text>
+  <text x="52" y="906" font-size="12" fill="#333">→ καλοριφέρ: ~0,7–0,85 kW ρεύμα</text>
+  <text x="52" y="922" font-size="12" fill="#333">   + ~9 kW θέρμανση στο σπίτι</text>
+  <text x="52" y="942" font-size="12" fill="#333">→ ψυγεία έξω: ~0,9–1,1 kW ρεύμα</text>
+  <text x="52" y="960" font-size="11" fill="#777">scroll με απώλειες 0,65 · ψυγεία αέρας 5°C+20</text>
+</svg>

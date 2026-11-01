@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 1040" width="1520" height="1040" font-family="DejaVu Sans, Arial, sans-serif">
+  <defs>
+    <marker id="aH" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/></marker>
+    <marker id="aC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker>
+    <marker id="aG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a8984"/></marker>
+    <pattern id="ins" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#ecebe6"/><line x1="0" y1="0" x2="0" y2="8" stroke="#c9c7c0" stroke-width="2"/>
+    </pattern>
+    <style>
+      .t  { font-size: 13px; fill: #0b0b0b; }
+      .ts { font-size: 11.5px; fill: #52514e; }
+      .tb { font-size: 14px; font-weight: bold; fill: #0b0b0b; }
+      .tz { font-size: 13px; font-weight: bold; fill: #8a8984; letter-spacing: 0.5px; }
+      .eq { fill: #f3f2ee; stroke: #52514e; stroke-width: 1.6; }
+      .ph2 { fill: none; stroke: #8a8984; stroke-width: 1.6; stroke-dasharray: 8 5; }
+      .hw { fill: none; stroke: #eb6834; stroke-width: 4; }
+      .cw { fill: none; stroke: #2a78d6; stroke-width: 4; }
+      .el { fill: none; stroke: #8a8984; stroke-width: 2.2; stroke-dasharray: 9 5; }
+      .sg { fill: none; stroke: #8a8984; stroke-width: 1.8; stroke-dasharray: 2 4; }
+      .sens { fill: #fcfcfb; stroke: #0b0b0b; stroke-width: 1.3; }
+    </style>
+  </defs>
+  <rect width="1520" height="1040" fill="#fcfcfb"/>
+
+  <text x="30" y="38" class="tb" style="font-size:20px">Τελική διάταξη: αντλία θερμότητας αέρα-νερού + παλιά δεξαμενή ως buffer + λέβητας σε σειρά</text>
+  <text x="30" y="62" class="ts">Σχηματικό λειτουργίας (όχι κατασκευαστικό). Φάση 1: συνεχείς γραμμές. Φάση 2 (φωτοβολταϊκά, με «Εξοικονομώ»): διακεκομμένο περίγραμμα.</text>
+
+  <!-- ΤΑΡΑΤΣΑ -->
+  <rect x="20" y="80" width="1480" height="200" rx="10" fill="#f6f5f1" stroke="#e6e5e0"/>
+  <text x="34" y="102" class="tz">ΤΑΡΑΤΣΑ (~50 m²) · μόνο ελαφριά πράγματα</text>
+  <circle cx="60" cy="140" r="18" fill="#f2c14e"/>
+  <rect x="100" y="115" width="560" height="150" rx="8" class="ph2"/>
+  <g fill="#3d5a80" stroke="#2b3f5c" stroke-width="1.2">
+    <path d="M130,245 L190,185 L310,185 L250,245 z"/>
+    <path d="M280,245 L340,185 L460,185 L400,245 z"/>
+    <path d="M430,245 L490,185 L610,185 L550,245 z"/>
+  </g>
+  <text x="120" y="140" class="tb">ΦΩΤΟΒΟΛΤΑΪΚΑ ~9-10 kWp</text>
+  <text x="120" y="158" class="ts">Φάση 2 · ~15 kg/m² · βάσεις με βαρίδια, χωρίς τρύπες στη μόνωση</text>
+  <text x="1080" y="150" class="ts">Ζεστό νερό χρήσης: ο υπάρχων ηλιακός</text>
+  <text x="1080" y="165" class="ts">θερμοσίφωνας (χωρίς αλλαγές)</text>
+
+  <!-- ΙΣΟΓΕΙΟ: έξω / τοίχος / μέσα -->
+  <rect x="20" y="295" width="545" height="400" rx="10" fill="#f6f5f1" stroke="#e6e5e0"/>
+  <text x="34" y="318" class="tz">ΕΞΩ · αυλή, ~3-4 m από τον λέβητα</text>
+  <rect x="565" y="295" width="22" height="400" fill="#b5b3ad"/>
+  <text x="576" y="712" class="ts" text-anchor="middle">τοίχος</text>
+  <rect x="587" y="295" width="913" height="400" rx="10" fill="#f2f6fb" stroke="#e1e9f3"/>
+  <text x="602" y="318" class="tz">ΜΕΣΑ · λεβητοστάσιο / ισόγειο</text>
+
+  <!-- Αντλία θερμότητας (έξω, στο έδαφος) -->
+  <circle cx="230" cy="495" r="175" fill="none" stroke="#eb6834" stroke-width="1.4" stroke-dasharray="3 5" opacity="0.7"/>
+  <text x="355" y="380" class="ts">ζώνη ασφαλείας R290 (εύφλεκτο):</text>
+  <text x="355" y="395" class="ts">μακριά από ανοίγματα, φρεάτια,</text>
+  <text x="355" y="410" class="ts">καμινάδα, αερισμό λεβητοστασίου</text>
+  <rect x="120" y="420" width="220" height="140" rx="8" class="eq"/>
+  <circle cx="185" cy="480" r="38" fill="#fcfcfb" stroke="#52514e" stroke-width="1.6"/>
+  <path d="M185,480 L185,446 M185,480 L215,497 M185,480 L155,497" stroke="#52514e" stroke-width="3"/>
+  <text x="235" y="462" class="tb">MX290-12S</text>
+  <text x="235" y="480" class="ts">αέρα-νερού</text>
+  <text x="235" y="495" class="ts">R290 · έως 75°C</text>
+  <text x="235" y="510" class="ts">12 kW · 135 kg</text>
+  <text x="130" y="550" class="ts">μονάδα εξωτερικού χώρου</text>
+  <rect x="110" y="560" width="240" height="16" class="eq"/>
+  <text x="120" y="594" class="ts">βάση 15-20 cm,</text>
+  <text x="120" y="608" class="ts">αντικραδασμικά,</text>
+  <text x="120" y="622" class="ts">αποχέτευση νερού απόψυξης</text>
+  <path d="M60,460 H112" stroke="#8a8984" stroke-width="2" fill="none" marker-end="url(#aG)"/>
+  <path d="M60,500 H112" stroke="#8a8984" stroke-width="2" fill="none" marker-end="url(#aG)"/>
+  <text x="38" y="440" class="ts">αέρας</text>
+  <circle cx="60" cy="660" r="11" class="sens"/><text x="60" y="664" font-size="9" text-anchor="middle">Τεξ</text>
+  <text x="76" y="664" class="ts">αισθητήρας εξωτ. θερμοκρασίας (σε σκιά)</text>
+
+  <!-- Σωλήνες αντλία <-> buffer (μέσα από τον τοίχο) -->
+  <path class="hw" d="M340,460 H640 V430 H676" marker-end="url(#aH)"/>
+  <path class="cw" d="M680,640 H620 V530 H344" marker-end="url(#aC)"/>
+  <rect x="390" y="453" width="22" height="14" class="eq"/><rect x="390" y="523" width="22" height="14" class="eq"/>
+  <text x="380" y="447" class="ts">αντιπαγετικές βάνες</text>
+  <text x="380" y="555" class="ts">μονωμένοι σωλήνες 1¼", λίγα μέτρα</text>
+  <rect x="610" y="575" width="20" height="30" rx="4" class="eq"/>
+  <text x="634" y="595" class="ts">φίλτρο</text>
+
+  <!-- Buffer -->
+  <rect x="676" y="400" width="140" height="275" rx="16" fill="url(#ins)" stroke="#52514e" stroke-width="1.6"/>
+  <rect x="688" y="412" width="116" height="251" rx="10" fill="#fbe3d7" stroke="#52514e" stroke-width="1"/>
+  <rect x="688" y="565" width="116" height="98" rx="10" fill="#dbe8f8"/>
+  <text x="746" y="470" class="tb" text-anchor="middle">BUFFER 1 m³</text>
+  <text x="746" y="490" class="ts" text-anchor="middle">η παλιά δεξαμενή</text>
+  <text x="746" y="505" class="ts" text-anchor="middle">πετρελαίου,</text>
+  <text x="746" y="520" class="ts" text-anchor="middle">καθαρισμένη,</text>
+  <text x="746" y="535" class="ts" text-anchor="middle">μονωμένη 10-15 cm</text>
+  <text x="746" y="605" class="ts" text-anchor="middle">ψυχρό κάτω</text>
+  <circle cx="804" cy="450" r="11" class="sens"/><text x="804" y="454" font-size="10" text-anchor="middle">Τ2</text>
+  <circle cx="804" cy="620" r="11" class="sens"/><text x="804" y="624" font-size="10" text-anchor="middle">Τ3</text>
+
+  <!-- Κύκλωμα καλοριφέρ -->
+  <path class="hw" d="M816,430 H880"/>
+  <path d="M880,420 L898,430 L880,440 z M916,420 L898,430 L916,440 z M888,448 L898,430 L908,448 z" fill="#f3f2ee" stroke="#0b0b0b" stroke-width="1.3"/>
+  <text x="872" y="412" class="t">Β1</text>
+  <path class="hw" d="M916,430 H1120" marker-end="url(#aH)"/>
+  <path class="hw" d="M898,448 V500"/>
+  <rect x="850" y="500" width="130" height="90" rx="8" class="eq"/>
+  <text x="915" y="530" class="tb" text-anchor="middle">ΛΕΒΗΤΑΣ</text>
+  <text x="915" y="548" class="ts" text-anchor="middle">υπάρχων, σε σειρά,</text>
+  <text x="915" y="563" class="ts" text-anchor="middle">μόνο εφεδρεία</text>
+  <path class="hw" d="M960,500 V470 H1000 V434"/>
+  <circle cx="1000" cy="430" r="5" fill="#eb6834"/>
+  <circle cx="1050" cy="430" r="13" class="eq"/><path d="M1044,423 L1058,430 L1044,437 z" fill="#52514e"/>
+  <text x="1040" y="462" class="t">Κ1</text>
+  <line x1="1090" y1="415" x2="1090" y2="428" stroke="#0b0b0b" stroke-width="1.3"/>
+  <circle cx="1090" cy="404" r="11" class="sens"/><text x="1090" y="408" font-size="10" text-anchor="middle">Τ4</text>
+  <g transform="translate(1125,390)">
+    <rect x="0" y="0" width="64" height="86" rx="4" class="eq"/>
+    <line x1="10" y1="6" x2="10" y2="80" stroke="#52514e" stroke-width="2"/><line x1="22" y1="6" x2="22" y2="80" stroke="#52514e" stroke-width="2"/>
+    <line x1="34" y1="6" x2="34" y2="80" stroke="#52514e" stroke-width="2"/><line x1="46" y1="6" x2="46" y2="80" stroke="#52514e" stroke-width="2"/>
+    <line x1="56" y1="6" x2="56" y2="80" stroke="#52514e" stroke-width="2"/>
+  </g>
+  <text x="1157" y="382" class="tb" text-anchor="middle">ΚΑΛΟΡΙΦΕΡ</text>
+  <text x="1185" y="494" class="ts">τα υπάρχοντα</text>
+  <path class="cw" d="M1175,476 V650 H836 V640 H818" marker-end="url(#aC)"/>
+  <line x1="1000" y1="650" x2="1000" y2="626" stroke="#52514e" stroke-width="2"/>
+  <ellipse cx="1000" cy="610" rx="18" ry="15" class="eq"/>
+  <text x="1024" y="610" class="ts">δοχείο διαστολής</text>
+  <text x="1040" y="668" class="ts">επιστροφή καλοριφέρ</text>
+
+  <!-- Ηλεκτρικά -->
+  <rect x="1290" y="400" width="170" height="60" rx="6" class="ph2"/>
+  <text x="1375" y="425" class="tb" text-anchor="middle">INVERTER</text>
+  <text x="1375" y="443" class="ts" text-anchor="middle">Φ/Β (Φάση 2)</text>
+  <rect x="1270" y="520" width="210" height="95" rx="6" class="eq"/>
+  <text x="1375" y="545" class="tb" text-anchor="middle">ΗΛΕΚΤΡΙΚΟΣ ΠΙΝΑΚΑΣ</text>
+  <text x="1375" y="563" class="ts" text-anchor="middle">δική της γραμμή 32 A</text>
+  <text x="1375" y="578" class="ts" text-anchor="middle">για την αντλία</text>
+  <text x="1375" y="593" class="ts" text-anchor="middle">έλεγχος παροχής (8 → 12 kVA;)</text>
+  <path class="el" d="M610,265 V280 H1375 V398"/>
+  <path class="el" d="M1375,460 V518"/>
+  <path class="el" d="M1300,615 V685 H360 V548 H343"/>
+  <text x="1150" y="699" class="ts">ρεύμα αντλίας</text>
+  <path class="sg" d="M1290,440 H1240 V340 H300 V418" marker-end="url(#aG)"/>
+  <text x="700" y="334" class="ts">σήμα SG-Ready από τον inverter (Φάση 2)</text>
+
+  <!-- Λογική -->
+  <rect x="20" y="730" width="920" height="300" rx="10" fill="#fcfcfb" stroke="#e6e5e0"/>
+  <text x="38" y="758" class="tb">Λογική λειτουργίας</text>
+  <text x="38" y="784" class="t"><tspan font-weight="bold">Φάση 1 (τώρα):</tspan> αντλία στην αυλή + buffer + λέβητας σε σειρά.</text>
+  <text x="56" y="808" class="t">1. Η αντλία ακολουθεί καμπύλη θερμοκρασίας από τον Τεξ: ~45°C όταν έξω είναι 12°C, ~65°C στους 0°C,</text>
+  <text x="74" y="826" class="t">έως 75°C μόνο όταν χρειάζεται. Χαμηλότερη θερμοκρασία = καλύτερο COP.</text>
+  <text x="56" y="850" class="t">2. Η Κ1 παίρνει νερό από την κορυφή του buffer. Η Β1 το στέλνει απευθείας στα καλοριφέρ.</text>
+  <text x="74" y="868" class="t">Ο λέβητας ανάβει μόνο αν η Τ4 μείνει κάτω από τον στόχο (π.χ. 30 λεπτά) ή αν σταματήσει η αντλία.</text>
+  <text x="56" y="892" class="t">3. Καλοκαίρι: η αντλία μένει εκτός (τα καλοριφέρ δεν κάνουν ψύξη). Ζεστό νερό από τον ηλιακό.</text>
+  <text x="38" y="920" class="t"><tspan font-weight="bold">Φάση 2 (με «Εξοικονομώ»):</tspan> φωτοβολταϊκά στην ταράτσα.</text>
+  <text x="56" y="944" class="t">4. Όταν περισσεύει ηλιακό ρεύμα, ο inverter δίνει σήμα SG-Ready και η αντλία φορτίζει το buffer</text>
+  <text x="74" y="962" class="t">έως ~60°C. Το βράδυ τα καλοριφέρ ζεσταίνονται από αυτή τη θερμότητα.</text>
+  <text x="38" y="990" class="ts"><tspan font-weight="bold">Ασφάλεια:</tspan> αποστάσεις R290 από ανοίγματα, καμινάδα και αερισμό του λεβητοστασίου, αντιπαγετική προστασία,</text>
+  <text x="38" y="1008" class="ts">βαλβίδα ασφαλείας 3 bar, δοχείο διαστολής, φίλτρο λάσπης. Επιβεβαιώστε τι περιέχει ήδη η μονάδα στο εγχειρίδιό της.</text>
+
+  <!-- Υπόμνημα -->
+  <rect x="960" y="730" width="540" height="300" rx="10" fill="#fcfcfb" stroke="#e6e5e0"/>
+  <text x="978" y="758" class="tb">Υπόμνημα</text>
+  <line class="hw" x1="980" y1="786" x2="1040" y2="786"/><text x="1054" y="790" class="t">Ζεστό νερό (προσαγωγή)</text>
+  <line class="cw" x1="980" y1="814" x2="1040" y2="814"/><text x="1054" y="818" class="t">Ψυχρό νερό (επιστροφή)</text>
+  <line class="el" x1="980" y1="842" x2="1040" y2="842"/><text x="1054" y="846" class="t">Ηλεκτρική γραμμή</text>
+  <line class="sg" x1="980" y1="870" x2="1040" y2="870"/><text x="1054" y="874" class="t">Σήμα ελέγχου (SG-Ready)</text>
+  <rect x="982" y="886" width="56" height="22" rx="4" class="ph2"/><text x="1054" y="902" class="t">Φάση 2 (φωτοβολταϊκά)</text>
+  <circle cx="1010" cy="930" r="12" class="eq"/><path d="M1004,923 L1018,930 L1004,937 z" fill="#52514e"/>
+  <text x="1054" y="934" class="t">Κ = κυκλοφορητής νερού</text>
+  <path d="M996,952 L1010,960 L996,968 z M1024,952 L1010,960 L1024,968 z" fill="#f3f2ee" stroke="#0b0b0b" stroke-width="1.2"/>
+  <text x="1054" y="964" class="t">Β = τρίοδη βάνα</text>
+  <circle cx="1010" cy="992" r="11" class="sens"/><text x="1010" y="996" font-size="10" text-anchor="middle">Τ</text>
+  <text x="1054" y="996" class="t">αισθητήρας θερμοκρασίας</text>
+</svg>
